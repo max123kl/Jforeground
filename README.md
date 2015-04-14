@@ -1,2 +1,3 @@
 # Jforeground
-A MW specifically designed for Joomla! Docs from a fork of Foreground
+
+A MW skin custom designed for Joomla! Docs from a fork of Foreground Skin

@@ -1,0 +1,136 @@
+/* Joomla CSS for Global Header */
+
+li.logo {
+  padding: .3em .3em 0 .7em;
+}
+
+#top-nav {
+  background: #142849;
+  z-index: 100002
+}
+
+nav  li.has-dropdown i.icon {
+	text-align: center;
+	padding: 0 3px;
+}
+
+nav  ul.dropdown li i.icon {
+	text-align: center;
+	padding: 0 2px 0 0;
+	margin-left: 0;
+}
+
+#bottom-nav {
+  background-color: #1b63a2;
+  border-top: 1px solid #2d8bdc;
+  border-bottom: 1px solid #10223e;
+  z-index: 100001
+}
+
+#navwrapper {
+	margin-bottom: 1.875em;
+	position: relative;
+}
+
+#bottom-nav .top-bar {
+	margin-bottom: 0;
+}
+
+#bottom-nav .top-bar, .top-bar .title-area,
+#bottom-nav .top-bar.expanded .title-area,
+#bottom-nav .top-bar .name h1 a,
+#bottom-nav .top-bar-section ul,
+#bottom-nav .top-bar-section ul li.active > a,
+#bottom-nav .top-bar-section li a:not(.button),
+#bottom-nav .top-bar-section .has-form,
+#bottom-nav .top-bar-section .dropdown li.title h5 a {
+	  background-color: #1b63a2;
+}
+
+#bottom-nav  .top-bar-section ul li.hover > a,
+#bottom-nav  .top-bar-section ul li ul.dropdown li.hover > a { background: #2C58A1 }
+
+nav.top-bar.top.row {
+	margin-bottom: 0;
+}
+
+.top-bar-section .dropdown li label {
+	background: #1E3A6C;
+	display:block;
+	padding:6px 0 4px 8px;
+	color:#ccc;
+}
+
+
+.top-bar-section .divider {
+  border-bottom: solid 1px #777;
+  border-top: solid 1px black;
+}
+
+.global-header {
+  padding: .525em 0;
+  margin-bottom: 0;
+  background: radial-gradient(circle, #17568c, #1a3867);
+  border-top: 1px solid #2f64b8;
+  border-bottom: 1px solid #10223e;
+}
+
+.global-header a {
+  color: #fff;
+}
+
+#global-header .large-5.column.hide-for-small {
+  padding-right: 0;
+}
+
+.global-header a.button {
+  padding: 10px 20px;
+  margin: .5em .3em 0;
+  font-weight: normal;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+  font-size: 1.1em;
+}
+
+.global-header a.button.success {
+  background: #f89406;
+  border: 0;
+}
+
+.global-header a.button.top {
+  background: #04c;
+  border: 0;
+}
+
+.global-header a.button.success:hover {
+  background-image: linear-gradient(to bottom,#f89406,#fbb450);
+}
+
+.global-header a.button.top:hover {
+  background-image: linear-gradient(to bottom,#04c,#08c);
+}
+
+h1.page-title {
+	color:#fff;
+	font-size: 1.875em;
+	font-weight: normal;
+	text-shadow: 1px 1px 1px #000;
+	line-height: 50px;
+	margin: 0;
+}
+
+@media only screen and (max-width: 480px) {
+h1.page-title {
+  font-size: 1.3em;
+}
+}
+
+#bottom-nav button.button.search.main.webfonts-changed {
+    background: #f89406;
+    font-weight: normal;
+    border: 0;
+    top: 0;
+}
+ 
+#bottom-nav button.button.search.main.webfonts-changed:hover {
+  background-image: linear-gradient(to bottom,#fbb450,#f89406);
+}

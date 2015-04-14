@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"HiRolla"
+		]
+	},
+	"skinname-jforeground": "jForeground",
+	"jforeground-desc": "Оформление, которое выводит на передний план именно содержимое страниц, минимизируя интерфейс сайта",
+	"jforeground-browsermsg": "Возможны непредвиденные изменения вида в Internet Explorer. Рекомендуем обновить Internet Explorer или пользоваться такими браузерами, как Firefox или Chrome.",
+	"jforeground-menutitle": "Меню"
+}
