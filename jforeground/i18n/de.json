@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kghbln"
+		]
+	},
+	"skinname-jforeground": "jForeground",
+	"jforeground-desc": "Stellt eine Benutzeroberfläche bereit, die die Inhalte des Wikis betont",
+	"jforeground-browsermsg": "sieht in dieser Version des Internet Explorers nicht wie gewünscht aus. Es wird eine Aktualisierung des Internet Explorers oder der Umstieg auf einen Browser wie bspw. Firefox oder Chrome empfohlen.",
+	"jforeground-menutitle": "Menü"
+}

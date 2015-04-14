@@ -87,7 +87,7 @@ class jforegroundTemplate extends BaseTemplate {
 ?>
 <!-- START FOREGROUNDTEMPLATE -->
 		<div id="top-nav" class="fixed">
-		<nav id="topnav" class="top-bar top row">
+		<nav class="top-bar top row">
 			<ul class="title-area">
 				<li class="name logo">
 					<?php if ($wgForegroundFeatures['navbarIcon'] != '0') { ?>
@@ -96,7 +96,7 @@ class jforegroundTemplate extends BaseTemplate {
 					<?php } ?>				
 				</li>
 				<li class="toggle-topbar menu-icon">
-					<a href="#"><span></span></a>
+					<a href="#"><span> </span></a>
 				</li>
 			</ul>
 
@@ -236,17 +236,12 @@ class jforegroundTemplate extends BaseTemplate {
 		</div>
 		
 		<div id="bottom-nav">
-		<nav id="bottomnav" class="top-bar bottom row">
+		<nav class="top-bar bottom row">
 			<ul class="title-area">
 				<li class="name">
-				<h1 class="title-name-small">
-				<a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>">				
-				<div class="title-name" style="display:none;"><?php echo $wgjForegroundFeatures['wikiName']; ?></div>
-				</a>
-				</h1>
 				</li>
 				<li class="toggle-topbar menu-icon">
-					<a href="#"><span></span></a>
+					<a href="#"><span> </span></a>
 				</li>
 			</ul>
 
@@ -307,7 +302,7 @@ class jforegroundTemplate extends BaseTemplate {
 							<?php wfRunHooks( SkinTemplateToolboxEnd, array( &$this, true ) );  ?>
 						</ul>
 						<?php if ($wgUser->isLoggedIn()): ?>
-							<div id="echo-notifications"></div>
+							<div id="echo-notifications" class="nomobile"></div>
 						<?php endif; ?>
 					<?php endif;
 					$namespace = str_replace('_', ' ', $this->getSkin()->getTitle()->getNsText());
