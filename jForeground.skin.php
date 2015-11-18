@@ -215,7 +215,7 @@ class jforegroundTemplate extends BaseTemplate {
 		<div id="global-header">
 		<nav class="global-header">
 			<div class="row">
-				<div class="large-7 column">
+				<div class="large-6 column">
 					<h1 class="page-title">
 										<a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>">
 					<?php if ($wgjForegroundFeatures['navbarIcon'] != '0') { ?>
@@ -225,10 +225,11 @@ class jforegroundTemplate extends BaseTemplate {
 					</a>
 					</h1> 
 				</div>
-				<div class="large-5 column hide-for-small">
+				<div class="large-6 column hide-for-small">
 					<ul class="button-group pull-right">
-						<li><a href="http://www.joomla.org/download.html" class="button success radius">Download <span class="hide-for-medium">Joomla</span></a></li>
-						<li><a href="http://demo.joomla.org/" class="button top radius">Demo <span class="hide-for-medium">Joomla</span></a></li>
+						<li><a href="https://www.joomla.org/download.html" class="button success radius" target="_blank">Download <span class="hide-for-medium">Joomla</span></a></li>
+						<li><a href="https://demo.joomla.org/" class="button top radius" target="_blank">Demo</a></li>
+						<li><a href="https://www.joomla.com/" class="button com radius" target="_blank">Joomla.com</a></li>
 					</ul>
 				</div>
 			</div>
