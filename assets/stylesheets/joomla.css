@@ -79,7 +79,7 @@ nav.top-bar.top.row {
   color: #fff;
 }
 
-#global-header .large-5.column.hide-for-small {
+#global-header .large-6.column.hide-for-small {
   padding-right: 0;
 }
 
@@ -101,12 +101,21 @@ nav.top-bar.top.row {
   border: 0;
 }
 
+.global-header a.button.com {
+  background: #f44321;
+  border: 0;
+}
+
 .global-header a.button.success:hover {
   background-image: linear-gradient(to bottom,#f89406,#fbb450);
 }
 
 .global-header a.button.top:hover {
   background-image: linear-gradient(to bottom,#04c,#08c);
+}
+
+.global-header a.button.com:hover {
+  background-image: linear-gradient(to bottom,#f44321,#fd5938);
 }
 
 h1.page-title {

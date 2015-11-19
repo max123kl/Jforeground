@@ -43,7 +43,8 @@ $wgResourceModules['skins.jforeground'] = array(
         'jforeground/assets/stylesheets/jforeground-print.css',
     	'jforeground/assets/stylesheets/jquery.autocomplete.css',
     	'jforeground/assets/stylesheets/responsive-tables.css',
-		'jforeground/assets/stylesheets/joomla.css'
+    	'jforeground/assets/stylesheets/icomoon.css',
+	'jforeground/assets/stylesheets/joomla.css'
     ),
     'scripts'        => array(
         'jforeground/assets/scripts/vendor/custom.modernizr.js',

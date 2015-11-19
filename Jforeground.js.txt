@@ -1,0 +1,92 @@
+### Make sure you add the following to the *MediaWiki:Jforeground.js* page on the wiki
+
+
+/* Couple extra prepends of icons for nav items */
+$('li#p-Learn a:first').prepend('<div class="drop-icon"><i class="fa fa-university fa-fw"></i></div>')
+$('li#p-Help a:first').prepend('<div class="drop-icon"><i class="fa fa-life-ring fa-fw"></i></div>')
+$('li#p-Browse a:first').prepend('<div class="drop-icon"><i class="fa fa-search fa-fw"></i></div>')
+ 
+/* Smooth scroll of TOC links with correct offset */
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function(e) {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+&& location.hostname == this.hostname) {
+ 
+      e.preventDefault();
+      var target = $(this.hash),
+      $target = $(target);
+      var hash = e.currentTarget.hash.substring(1);
+      var targetAnchor = target.length ? target : $("span[id='" + hash + "']");
+      if (targetAnchor.length) {
+        $('html,body').animate({
+          scrollTop: targetAnchor.offset().top - 105 //offsets for fixed header
+        }, 1600, 'swing', function () {
+                window.location.hash = hash ;
+                });
+        return false;
+      }
+    }
+  });
+  //Executed on page load with URL containing an anchor tag.
+  if($(location.href.split("#")[1])) {
+      var targetURL = $("span[id='"+location.href.split("#")[1]+"']");
+      if (targetURL.length) {
+        $('html,body').animate({
+          scrollTop: targetURL.offset().top - 105 //offset height of header here too.
+        }, 1600);
+        return false;
+      }
+    }
+});
+ 
+/* Sticky navbars for mobile view */
+jQuery(document).ready(function(){
+	   $(window).bind('scroll', function() {
+	   var navHeight = 68;
+			 if ($(window).scrollTop() > navHeight) {
+				 if ($('nav#topnav').hasClass('expanded')) {
+	  				 $('nav#topnav').parent().addClass('fixed');
+	  				 $('nav#topnav').removeClass('fixed');
+	  				 $('nav#topnav').toggleClass('expanded').css('min-height', '');
+	  				 $('body').css('padding-top','45px');
+	  			 			 }
+				 $('#bottom-nav').addClass('fixed');
+				 $('#navwrapper').css('margin-bottom', '5em');
+			 }
+			 else {
+				 $('#bottom-nav').removeClass('fixed');
+				 $('body').css('padding-top','45px');
+				 $('#navwrapper').css('margin-bottom', '1.875em');
+			 }
+		});
+	});
+ 
+/* Footer fix on small pages */ 
+if ( mw.config.get( 'wgIsArticle' ) ) {
+$(window).bind("load", function () {
+    var footer = $("footer.row");
+    var pos = footer.position();
+    var height = $(window).height();
+    height = height - pos.top;
+    height = height - footer.height();
+    if (height > 0) {
+        footer.css({
+            'position': 'fixed', 'bottom': '0', 'width': '100%'
+        });
+    }
+});
+}
+ 
+/* AddThis script for social sharing do not remove specific to Joomla*/ 
+mw.loader.load( 'https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5378f70766e02197&action=raw&ctype=text/javascript&smaxage=21600&maxage=86400' );
+ 
+var addthis_share = {
+     url_transforms : {
+          shorten: {
+               twitter: 'bitly'
+          }
+     }, 
+     shorteners : {
+          bitly : {} 
+     }
+}

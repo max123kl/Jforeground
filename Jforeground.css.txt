@@ -1,0 +1,1232 @@
+### Make sure you add the following to the *MediaWiki:Jforeground.css* page on the wiki
+
+/* Note - this needs to be cleaned up */
+
+.ns-798 { background: linear-gradient(to bottom, #5290C8 0px, #ffffff 240px) }
+.ns-798.ns-subject.page-Joomla_Main_Page h1.title { display: none; }
+ 
+#bottom-nav.fixed { top:45px; }
+ 
+/* quick fix, need to change stylesheets */
+ 
+.ns-subject h3, .ns-special h3, .page-Main_Page h3 {
+  font-size: 1.125em;
+}
+ 
+@media only screen and (min-width: 768px) { 
+.ns-subject h3, .ns-special h3, .page-Main_Page h3 {
+  font-size: 1.25em;
+}
+}
+ 
+/*end quick fix */
+ 
+h1.title {
+    padding-bottom: 0em;
+    margin-bottom: 0em;
+    line-height: 1.4em;
+}
+ 
+    h1 { font-size: 1.80em; line-height: 2em }
+ 
+    h2 { font-size: 1.40em; line-height: 1.6em  }
+ 
+    h3 { font-size: 1.125em; line-height: 1.325em  }
+ 
+    h4 { font-size: 1.08em; line-height: 1.28em  }
+ 
+    h5 { font-size: 1em; line-height: 1.2em  }
+ 
+    h6 { font-size: .9em; line-height: 1.1em  }
+ 
+ul,
+ol { margin-left: 1.25em }
+ 
+a:focus { outline: none }
+ 
+body { font-size: 95%; background-color: #f4f6f7; }
+
+.center { text-align: center; }
+ 
+@media only screen and (min-width: 768px) { 
+    h5 { line-height: 1.2 }
+
+    h6 { line-height: 1.1 }
+ 
+    h1 { font-size: 2em; line-height: 2.2em  }
+ 
+    h2 { font-size: 1.5em; line-height: 1.7em  }
+ 
+    h3 { font-size: 1.25em; line-height: 1.45em  }
+ 
+    h4 { font-size: 1.125em; line-height: 1.325em  }
+}
+ 
+#p-cactions {
+    margin-top: 0;
+    background-color: #fff;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
+}
+ 
+footer.row {
+    margin-top: 2em;
+    color: white;
+    max-width: 100%;
+    margin: .5em 0 0 0;
+    background: #142849;
+    padding: .5em;
+}
+ 
+.row { max-width: 75.625em }
+ 
+/* ===[ Hide "Main Page" titles ]=== */
+ 
+body[class*="page-Main_Page"] h1.title,
+body[class*="page-Main_Page"] h3#tagline,
+body[class*="page-Beginners"] h2.title,
+body[class*="page-Beginners"] h3#tagline { display: none }
+ 
+/* ===[ Hide main page image on small screens ]=== */
+ 
+@media only screen and (max-width: 768px) { 
+    .main-page-image { text-align: center }
+ 
+    #toc {
+        float: none !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+}
+ 
+@media only screen and (min-width: 768px) { 
+    .large-6-spaced {
+        position: relative;
+        width: 49%;
+    }
+ 
+    .large-4-spaced {
+        position: relative;
+        width: 32%;
+    }
+ 
+    .large-3-spaced {
+        position: relative;
+        width: 24%;
+    }
+}
+ 
+#toc { border: 1px solid #ccc }
+ 
+/* ===[ Line up the icons in dropdown menus ]=== */
+ 
+#icon {
+    display: inline-block;
+    line-height: 1em;
+    padding: 0;
+    text-align: center;
+    margin: 0 5px 0 0;
+}
+ 
+/* Main Page Language Layout */
+#page-content #lang-control .mw-pt-languages {
+  width: auto;
+  border: none;
+  display: block;
+  background: none;
+  overflow: visible;
+}
+#page-content #lang-control .mw-pt-languages-label {
+  border: none;
+  background: none;
+  color: #333;
+  padding: 0;
+  width: auto;
+  display: block;
+}
+#page-content #lang-control .mw-pt-languages-list {
+  display: block;
+  width: 100%;
+  background: none;
+}
+ 
+.mw-bodytext h1,
+.mw-bodytext h2,
+.mw-bodytext h3,
+.mw-bodytext h4,
+.mw-bodytext  h5,
+.mw-bodytext h6 { margin-top: 1em }
+ 
+/* ===[ Underline h2 Section headings ]=== */
+ 
+.mw-bodytext h2 {
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+}
+ 
+/* ===[ Don't underline Portal Box Headings ]=== */
+ 
+.portal-header .mw-headline { border: none }
+ 
+/* ===[ Top and bottom spacing on h1 and h2 headings ]=== */
+ 
+h1 span.mw-headline { line-height: 1.8em }
+h2 span.mw-headline { display: inline; }
+ 
+/* ===[ Custom changes to page ]=== */
+ 
+h3#tagline {
+    display: inline;
+    font-size: 0.85em !important;
+    font-weight: normal;
+    font-style: normal;
+    margin-right: .5em;
+}
+ 
+h2.title {
+    font-size: 1.8em;
+    color: #142849;
+    padding-bottom: 0em;
+    border-bottom: none;
+    margin-top: .5em;
+}
+ 
+h4.namespace.label {
+    padding: 0.25em;
+    font-size: 1.1em !important;
+    font-weight: normal;
+    margin-bottom: .75em;
+}
+ 
+h5.subtitle { font-size: .80em !important }
+ 
+.hf-nsheader { line-height: 1.0em }
+ 
+/* ===[ Custom Foreground menubar colors for theme ]=== */
+ 
+#top-nav .top-bar,
+#top-nav .top-bar .title-area,
+#top-nav .top-bar .expanded .title-area,
+#top-nav .top-bar .name h1 a,
+#top-nav .top-bar-section ul,
+#top-nav .top-bar-section ul li.active > a,
+#top-nav .top-bar-section li a:not(.button),
+#top-nav .top-bar-section .has-form,
+#top-nav .top-bar-section .dropdown li.title h5 a {
+    background: #142849;
+    color: #FFF;
+}
+ 
+@media screen and (min-width: 58.75em) {
+.top-bar {
+  background: #142849;
+  overflow: visible;
+}
+}
+ 
+#top-nav .top-bar .name h1 a { width: auto }
+ 
+#top-nav .top-bar .toggle-topbar.menu-icon,
+#top-nav .top-bar .toggle-topbar.menu-icon a { color: #FFF }
+ 
+#top-nav .top-bar-section > ul > .divider,
+#top-nav .top-bar-section > ul > [role="separator"] { border-color: #142849 }
+ 
+/* ===[ Darker color for the hover over items ]=== */
+ 
+#top-nav .top-bar-section ul li.hover > a,
+#top-nav .top-bar-section ul li ul.dropdown li.hover > a { background: #2C58A1 }
+ 
+/* ===[ Slightly darker color for the dropdowns ]=== */
+ 
+#top-nav .top-bar-section ul li ul.dropdown li > a { background: #1E3A6C }
+ 
+.panel {
+    padding: .5em;
+    overflow: hidden;
+    margin-bottom: .5em;
+}
+ 
+.panel h1.subheader,
+.panel h2.subheader,
+.panel h3.subheader,
+.panel h4.subheader,
+.panel h5.subheader,
+.panel h6.subheader {
+    line-height: 1.8em;
+    margin-bottom: 0.25em;
+    border-bottom: 1px solid #d9d9d9;
+}
+ 
+.subheader-ambox {
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1.8;
+    overflow: hidden;
+    margin-bottom: .3em;
+    border-bottom: none;
+}
+ 
+.subheader-ambox img {
+    float: left;
+    padding-top: .2em;
+    margin: 0;
+}
+ 
+div#mw-pages table { width: 100% }
+ 
+#toc {
+    padding: .5em;
+    float: right;
+    margin: .5em 0 1.25em .75em;
+    background-color: #f6f6f6;
+    width: auto;
+    max-width: 375px;
+    word-wrap: normal;
+    font-size: .875em;
+}
+ 
+.mw-content-ltr .toc ul,
+.mw-content-ltr #toc ul,
+.mw-content-rtl .mw-content-ltr .toc ul,
+.mw-content-rtl .mw-content-ltr #toc ul {
+    width: auto;
+    list-style-position: outside;
+    margin-left: 1.75em;
+}
+ 
+#toc ul li {
+    list-style-position: outside;
+    list-style-type: none;
+}
+ 
+#toc h2 {
+    border-bottom: none !important;
+    margin-top: 0;
+    display: inline-block;
+}
+ 
+span.toctoggle,
+span.toctoggle a { vertical-align: top }
+ 
+.top-bar .name h1 { font-size: 1.0625em }
+ 
+.editsection { font-size: 13px }
+ 
+img {
+    max-width: 100%;
+    height: auto;
+    margin: .5em 0;
+}
+ 
+ul img,
+ol img { margin: 0 }
+ 
+img.thumbborder {
+    border: #ccc 1px solid;
+    margin: 0 0 1em;
+}
+ 
+.tright {
+    line-height: 1.4em;
+    padding: 3px !important;
+    font-size: 94%;
+    border: 1px solid #ccc;
+    margin-left: 1em;
+}
+ 
+.tleft {
+    line-height: 1.4em;
+    padding: 3px !important;
+    font-size: 94%;
+    border: 1px solid #ccc;
+    margin-right: 1em;
+}
+ 
+blockquote {
+    border-left: 5px solid #ddd;
+    margin: 0 0 0 .75em;
+    padding: .5em .5em .5em 1em;
+}
+ 
+blockquote p { margin: 0 }
+ 
+/* ===[ Editor Fixes ]=== */
+ 
+.wikiEditor-ui textarea#wpTextbox1 {
+    margin: 0;
+    padding: 3px !important;
+    width: 100%;
+    font-family: courier !important;
+}
+ 
+.wikiEditor-ui-toolbar .group .label { background-color: transparent }
+ 
+/* ===[ Get rid of [edit] links in preview ]=== */
+ 
+.wikiEditor-preview-contents .editsection { display: none }
+ 
+/* editor interface */
+ 
+.editOptions {
+    background-color: #F0F0F0;
+    border: 1px solid silver;
+    border-top: none;
+    padding: 1em 1em 1.5em 1em;
+    margin-bottom: 2em;
+}
+ 
+#editpage-copywarn2 {
+    background-color: #F0F0F0;
+    border-top: none;
+    border-bottom: none;
+    padding: .25em 1em .5em 1em;
+}
+ 
+.mw-editTools {
+    background-color: #F0F0F0;
+    border: 1px solid silver;
+    padding: .5em;
+    margin-bottom: 2em;
+    font-size: 90%;
+}
+ 
+#page-content .noarticletext ul { margin: 0.3em 0 0.3em 2.75em }
+ 
+.mw-content-ltr ol,
+.mw-content-rtl .mw-content-ltr ol {
+    margin: 0.3em 0 0.3em 2.75em;
+    padding: 0;
+    list-style-position: outside;
+}
+ 
+.mw-content-ltr ul,
+.mw-content-rtl .mw-content-ltr ul,
+#mw-content-text ul {
+    margin: 0.3em 0 0.3em 2.75em;
+    padding: 0;
+    list-style-position: outside;
+}
+ 
+.poweredby { display: none }
+ 
+.printfooter { display: none }
+ 
+/* ===[ Category Links ]=== */
+ 
+.catlinks {
+    clear: both;
+    border: 1px solid #ccc;
+    margin-top: .5em;
+    padding: .25em;
+    display: block;
+}
+ 
+#catlinks .label {
+    padding: 5px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+ 
+#catlinks .label.new { background-color: #900900 }
+ 
+.hotcatlink .label {
+    background: transparent;
+    color: #aaa;
+}
+ 
+.hotcatlink #catlinks .label:hover {
+    background: transparent;
+    color: #2C58A1;
+}
+ 
+/* ===[ Tables ]=== */
+ 
+table {
+    border: none;
+    width: auto;
+}
+ 
+.wikitable {
+    white-space: pre-wrap;
+    word-wrap: normal;
+}
+ 
+table.ambox { width: 92% }
+ 
+table.ambox th.ambox-text,
+table.ambox td.ambox-text { width: auto }
+ 
+/* amboxNew classes */
+ 
+p.ambox { margin: .5em 0 }
+ 
+.ambox-title {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.2;
+    margin-left: .25em;
+}
+ 
+.panel.ambox-merge {
+    background-color: #bcf0f7;
+    border-color: #bcf0f7;
+}
+ 
+.panel.ambox-notice {
+    background-color: aqua;
+    border-color: aqua;
+}
+ 
+.panel.ambox-copyedit {
+    background-color: cornsilk;
+    border: 1px solid cornsilk;
+}
+ 
+.panel.ambox-split {
+    background-color: #bcf0f7;
+    border-color: #bcf0f7;
+}
+ 
+.panel.ambox-delete {
+    background-color: #ffc;
+    border-color: #ffc;
+}
+ 
+.panel.ambox-serious {
+    background-color: #FFBABA;
+    border-color: #FFBABA;
+}
+ 
+.ambox-delete .subheader-ambox { color: red }
+ 
+.panel.ambox-tip {
+    background-color: #bad0e3;
+    border-color: #bad0e3;
+}
+ 
+.panel.radius { box-shadow: none; border-radius:0; }
+ 
+/* alert-box used for note template  */
+ 
+.alert-box b {
+    font-weight: bolder;
+    font-size: 1em;
+}
+ 
+.alert-box { overflow: hidden }
+ 
+/* fixing headertabs  */
+ 
+.ui-tabs .ui-tabs-nav {
+    font-size: 90%;
+    margin: 0 !important;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+ 
+#headertabs .ui-widget-content { background: none }
+ 
+/* ===[ Fixes for Google Custom Search ]=== */
+ 
+input.gsc-search-button {
+    font-size: 1.5em !important;
+    padding: 5px 3px !important;
+    height: auto !important;
+    background: #f89406 !important;
+    color: #fff !important;
+    font-weight: normal !important;
+}
+
+td.gsc-search-button {
+    vertical-align: top !important;
+}
+
+input.gsc-input {
+  font-size: 16px !important;
+  height: 32px !important;
+}
+ 
+/* ===[ Width for Abuse filter ]=== */
+ 
+#wpFilterRules { width: 80% !important }
+ 
+/* dl fixes  */
+ 
+dl,
+dd,
+dl dd { margin-bottom: 1em }
+ 
+/* p element tweaks  */
+ 
+p {
+    margin: 1em 0 1em 0;
+    line-height: 1.4em;
+}
+ 
+/* external link icons ltr (left-to-right) content  */
+ 
+.ltr .external.free {
+    padding-right: none;
+    background: none;
+    text-decoration: none !important;
+}
+ 
+.ltr .external.text {
+    padding-right: none;
+    background: none;
+    text-decoration: none !important;
+}
+ 
+.ltr .no-external-icon .external.text {
+    padding: 0;
+    background: none !important;
+}
+ 
+div#mw-content-text a.external[href ^="mailto:"],
+.link-mailto {
+    padding-right: 12px;
+    background: url(skins/foreground/assets/images/mail-icon.png) top right no-repeat;
+    text-decoration: none !important;
+}
+ 
+div#mw-content-text a.external[href ^="http://"],
+.link-http {
+    padding-right: 12px;
+    background: url(skins/foreground/assets/images/external-link-ltr-icon.png) top right no-repeat;
+    text-decoration: none !important;
+}
+ 
+div#mw-content-text a.external[href ^="https://"],
+.link-https {
+    padding-right: 12px;
+    background: url(skins/foreground/assets/images/lock-icon.png) top right no-repeat;
+    text-decoration: none !important;
+}
+ 
+div#mw-content-text a.external[href ^="gopher://"] {
+    padding-right: 13px;
+    background: url(skins/foreground/assets/images/external-link-ltr-icon.png) center right no-repeat;
+    text-decoration: none !important;
+}
+ 
+div#mw-content-text a.external[href ^="ftp://"],
+.link-ftp {
+    padding-right: 12px;
+    background: url(skins/foreground/assets/images/file-icon.png) top right no-repeat;
+    text-decoration: none !important;
+}
+ 
+div#mw-content-text a.external[href ^="irc://"],
+div#mw-content-text a.external[href ^="ircs://"],
+.link-irc {
+    padding-right: 12px;
+    background: url(skins/foreground/assets/images/talk-icon.png) top right no-repeat;
+    text-decoration: none !important;
+}
+ 
+div#mw-content-text a.external[href $=".ogg"],
+div#mw-content-text a.external[href $=".OGG"],
+div#mw-content-text a.external[href $=".mid"],
+div#mw-content-text a.external[href $=".MID"],
+div#mw-content-text a.external[href $=".midi"],
+div#mw-content-text a.external[href $=".MIDI"],
+div#mw-content-text a.external[href $=".mp3"],
+div#mw-content-text a.external[href $=".MP3"],
+div#mw-content-text a.external[href $=".wav"],
+div#mw-content-text a.external[href $=".WAV"],
+div#mw-content-text a.external[href $=".wma"],
+div#mw-content-text a.external[href $=".WMA"],
+.link-audio {
+    padding-right: 12px;
+    background: url(skins/foreground/assets/images/audio-icon.png) top right no-repeat;
+    text-decoration: none !important;
+}
+ 
+div#mw-content-text a.external[href $=".ogm"],
+div#mw-content-text a.external[href $=".OGM"],
+div#mw-content-text a.external[href $=".avi"],
+div#mw-content-text a.external[href $=".AVI"],
+div#mw-content-text a.external[href $=".mpeg"],
+div#mw-content-text a.external[href $=".MPEG"],
+div#mw-content-text a.external[href $=".mpg"],
+div#mw-content-text a.external[href $=".MPG"],
+.link-video {
+    padding-right: 12px;
+    background: url(skins/foreground/assets/images/video-icon.png) top right no-repeat;
+    text-decoration: none !important;
+}
+ 
+div#mw-content-text a.external[href $=".pdf"],
+div#mw-content-text a.external[href $=".PDF"],
+div#mw-content-text a.external[href *=".pdf#"],
+div#mw-content-text a.external[href *=".PDF#"],
+div#mw-content-text a.external[href *=".pdf?"],
+div#mw-content-text a.external[href *=".PDF?"],
+.link-document {
+    padding-right: 12px;
+    background: url(skins/foreground/assets/images/document-icon.png) top right no-repeat;
+    text-decoration: none !important;
+}
+ 
+/* ===[ Echo badge ]=== */
+ 
+#echo-notifications #pt-notifications a.mw-echo-short-link .mw-badge { padding: 5px }
+#echo-notifications { margin: .5em 1em .5em 0 }
+ 
+/* ===[ Link improvements as suggested by Peter ]=== */
+ 
+#mw-content-text a { color: #336699 }
+ 
+#toc a { text-decoration: none }
+ 
+#mw-content-text a:hover,
+#mw-content-text a:focus {
+    color: #4d82dc;
+    text-decoration: underline;
+}
+ 
+body.page-Main_Page #mw-content-text a { text-decoration: none }
+ 
+body.page-Main_Page #mw-content-text a:hover,
+body.page-Main_Page #mw-content-text a:focus { text-decoration: underline }
+ 
+/* ===[ Make sure red links are red ]=== */
+ 
+#mw-content-text a.new,
+#mw-content-text #quickbar a.new { color: #ba0000 !important }
+ 
+/* captcha improvements  */
+ 
+.captcha {
+    border: 1px solid #2ba6cb;
+    padding: 1em;
+    background: lightyellow;
+    margin: 1.5em 0;
+}
+ 
+.captcha label {
+    font-size: .9em;
+    font-weight: bold;
+}
+ 
+/* ===[ InputBox Styling ]=== */
+ 
+.createbox {
+    text-align: center;
+    padding: 1.5em .5em 0 .5em;
+    background: transparent;
+}
+ 
+.createboxInput { max-width: 100% }
+ 
+/* floatright and left styles - make responsive for mobile  */
+ 
+div.floatright,
+table.floatright {
+    margin: 0 0 .5em .5em;
+    border: 0;
+}
+ 
+div.floatleft,
+table.floatleft {
+    margin: 0 .5em .5em 0;
+    border: 0;
+}
+ 
+@media only screen and (max-width: 480px) { 
+    div.floatright,
+    table.floatright,
+    div.floatleft,
+    table.floatleft {
+        text-align: center;
+        float: none;
+        margin: .5em auto;
+    }
+}
+ 
+/* ===[ Dissmissable SiteNotice better formatting ]=== */
+ 
+#siteNotice.panel {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+ 
+#siteNotice {
+    margin: 0;
+    padding: 0;
+}
+ 
+.mw-dismissable-click {
+    font-size: 80%;
+    margin: .25em .5em 0 0;
+}
+ 
+/* ===[ Take advantage of ajax patrolling/better notice placement ]=== */
+ 
+#mw-notification-area {
+    position: absolute;
+    top: -1em;
+    right: 50%;
+    margin-right: -10em;
+    z-index: 100003;
+}
+ 
+.postedit-container {
+    z-index: 100003;
+}
+ 
+/* CSS Modifications for Translate Extension
+   ================================================== */
+ 
+.mw-special-Translate a.button.dropdown,
+.mw-special-LanguageStats a.button.dropdown,
+.mw-special-MessageGroupStats a.button.dropdown { display: block }
+ 
+.grid .column,
+.grid .columns { width: auto }
+ 
+#mw-content-text ul.tux-message-selector { margin: 0 auto }
+ 
+#mw-content-text ul.tux-message-selector li.column.more { float: left }
+ 
+.tux-message-selector li { line-height: inherit }
+ 
+.six.columns.tux-view-switcher.text-center { padding: 5px }
+ 
+.tux-message-editor textarea { width: 100% }
+ 
+.mw-tpt-sp-section { margin-bottom: 1em }
+ 
+.tux-messagelist .tux-message-pagemode .tux-pagemode-translation,
+.tux-messagelist .tux-message-pagemode .tux-pagemode-source {
+    padding-left: 15px;
+    font-size: .85em;
+}
+ 
+/* ===[ Style the languages nav box to our site ]=== */
+ 
+#page-content .mw-pt-languages-label {
+    border-right: 1px solid #142849;
+    background: #142849 none repeat scroll 0 0;
+    color: white;
+    padding: 0.5em;
+    width: 200px;
+    font-weight: bold;
+    font-size: .9em;
+}
+ 
+#page-content .mw-pt-languages-list { font-size: .9em }
+ 
+#page-content .mw-pt-languages {
+    border: 1px solid #142849;
+    width: 100%;
+    font-size: .9em;
+}
+ 
+#p-lang li.interlanguage-link,
+.autonym { font-family: sans-serif, Autonym }
+ 
+/* make sure links to translation namespace(ns1198) page on File page is hidden  */
+ 
+li.mw-imagepage-linkstoimage-ns1198 { display: none }
+ 
+/* ===[ Stupid hack to fix translate extension lack of div containers- fixes header-footer extension ]=== */
+ 
+#mw-content-text .hf-nsheader { display: none }
+ 
+#mw-content-text hr + .hf-nsheader { display: block }
+ 
+/* ===[ Category Links at the Bottom with Style ]=== */
+ 
+#catlinks .label {
+    padding: 5px;
+    border-radius: 3px;
+}
+ 
+#catlinks .label.new { background-color: #b70b00 }
+ 
+#catlinks .label:hover { background-color: #2C58A1 }
+ 
+#catlinks .label.new:hover { background-color: #900900 }
+ 
+/* ===[ Fixes for User Preferences Pages ]=== */
+ 
+#preftoc {
+    width: 100%;
+    float: left;
+    clear: both;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+ 
+#preftoc li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    padding-right: 1px;
+    height: 2.25em;
+    white-space: nowrap;
+    list-style-type: none;
+    list-style-image: none;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+ 
+#preftoc li:first-child { margin-left: 1px }
+ 
+#preftoc li.selected a {
+    background-position: bottom;
+    background-repeat: repeat-x;
+    color: #333;
+    text-decoration: none;
+}
+ 
+#preftoc a,
+#preftoc a:active {
+    display: inline-block;
+    position: relative;
+    color: ;
+    padding: 0.5em;
+    text-decoration: none;
+    background-image: none;
+    font-size: 0.9em;
+}
+ 
+#preftoc a:hover,
+#preftoc a:focus { text-decoration: underline }
+ 
+#preferences {
+    float: left;
+    width: 100%;
+    margin: 0;
+    margin-top: -2px;
+    clear: both;
+    border: solid 1px #ccc;
+    background-color: #fafafa;
+}
+ 
+#preferences fieldset {
+    border: none;
+    border-top: solid 1px #ccc;
+}
+ 
+#preferences fieldset.prefsection {
+    border: none;
+    padding: 0;
+    margin: 1em;
+}
+ 
+#preferences fieldset.prefsection legend.mainLegend { display: none }
+ 
+#preferences legend { color: #666 }
+ 
+#preferences td {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+ 
+#preferences div.mw-prefs-buttons { padding: 1em }
+ 
+#preferences div.mw-prefs-buttons input { margin-right: 0.25em }
+ 
+.htmlform-tip {
+    font-size: x-small;
+    padding: .2em 2em;
+    color: #666;
+}
+ 
+.preferences-login {
+    clear: both;
+    margin-bottom: 1.5em;
+}
+ 
+.prefcache {
+    font-size: 90%;
+    margin-top: 1em;
+}
+ 
+/* ===[ Footer links ]=== */
+ 
+li#footer-privacy,
+li#footer-about,
+li#footer-disclaimer { display: block }
+ 
+/* ===[ For Social ]=== */
+ 
+div#social {
+    display: inline-block;
+    margin: .25em .5em 0 0;
+}
+ 
+.social-footer p {
+    float: left;
+    display: inline-block;
+    margin: 0 .5em 0 0;
+    font-size: 1.5em;
+    line-height: 32px;
+}
+ 
+.addthis_toolbox.addthis_default_style.addthis_32x32_style {
+    display: inline-block;
+    float: right;
+}
+ 
+/* ===[ Hide social share on certain namespaces until I can figure out why $this->data['isarticle'] is ignoring $wgContentNamespaces as the article check ]=== */
+ 
+.ns-2 div#social,
+.ns-3 div#social,
+.ns-5 div#social,
+.ns-6 div#social,
+.ns-7 div#social,
+.ns-8 div#social,
+.ns-9 div#social,
+.ns-10 div#social,
+.ns-11 div#social,
+.ns-13 div#social,
+.ns-15 div#social,
+.ns-140 div#social,
+.ns-136 div#social { display: none }
+ 
+textarea#wpTextbox1 { width: 100% }
+ 
+/* ===[ Google Calendar Responsive ]=== */
+ 
+.calendar-container {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+}
+ 
+.calendar-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ===[ Video embedding ]=== */
+
+.video-container {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px;
+height: 0;
+overflow: hidden;
+}
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+.video-container :active {
+outline:none;
+}
+ 
+/* ===[ Button styles ]=== */
+ 
+a#content-button.secondary { color: #333333 }
+ 
+a:hover#content-button.secondary,
+a:focus#content-button.secondary {
+    color: #333333;
+    text-decoration: none;
+}
+ 
+a#content-button { color: #ffffff }
+ 
+a:hover#content-button,
+a:focus#content-button {
+    color: #fff;
+    text-decoration: none;
+}
+ 
+#content-button.button {
+    padding-top: 0.8125em;
+    padding-bottom: 0.75em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    -webkit-appearance: none;
+    font-size: 1em;
+}
+ 
+#content-button.button.tiny {
+    padding-top: 0.4375em;
+    padding-right: 0.875em;
+    padding-bottom: 0.5em;
+    padding-left: 0.875em;
+    -webkit-appearance: none;
+    font-size: 0.6875em;
+}
+ 
+#content-button.button.small {
+    padding-top: 0.625em;
+    padding-bottom: 0.5625em;
+    -webkit-appearance: none;
+    padding-right: 1.125em;
+    padding-left: 1.125em;
+    font-size: .875em;
+}
+ 
+#content-button.button.large {
+    padding-top: 1.03125em;
+    padding-bottom: 1.03125em;
+    -webkit-appearance: none;
+    padding-right: 0em;
+    padding-left: 0em;
+    font-size: 1.25em;
+}
+ 
+.mw-changeslist-legend { font-size: 75% }
+ 
+/* quick fix to create account button */
+#mw-createaccount-cta a:hover {
+background-color: #ccc;
+text-decoration: none;
+color: white;
+border-color: #ccc;
+}
+#mw-createaccount-cta a {
+color: white;
+}
+input.createboxInput {
+margin: 0 .5em;
+}
+ 
+/* Icons, JColors, Main-page DO NOT DELETE */
+ 
+#main-page-list {
+  display: inline-block;
+  width: auto;
+  margin: 0 auto;
+}
+ 
+span.main-page-text {
+  line-height: 2.2em;
+  font-size: 1.1em;
+  color: #000;
+}
+ 
+@media only screen and (max-width: 480px) {
+span.main-page-text {
+  font-size: 1em;
+}
+}
+ 
+span.icon-text {
+  line-height: 1.3em;
+  font-size: 1.2em;
+  width: auto;
+  height: auto;
+}
+ 
+.main-page-icon {
+  color: #fff;
+  min-width: 150px;
+  display: inline-block;
+  margin: 1em auto;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  padding: 1.5em;
+}
+ 
+.blue-bkgd {
+  background: #5091cd;
+  border-color: #5091cd;
+}
+ 
+.blue {
+  color: #5091cd;
+}
+ 
+.red-bkgd {
+  background: #f44321;
+  border-color: #f44321;
+}
+ 
+.red {
+  color: #f44321;
+}
+ 
+.dark-grey-bkgd {
+  background: #433e42;
+  border-color: #433e42;
+}
+ 
+.green-bkgd {
+  background: #7ac143;
+  border-color: #7ac143;
+}
+ 
+.green {
+  color: #7ac143;
+}
+ 
+.orange-bkgd {
+  background: #f9a541;
+  border-color: #f9a541;
+}
+ 
+.orange {
+  color: #f9a541;
+}
+
+.white-bkgd {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+ 
+.white {
+  color: #ffffff;
+}
+ 
+.icon {
+  width: 30px;
+  text-align: center;
+}
+ 
+/* If nomobile then nomobile under 480px */
+@media only screen and (max-width: 480px) {
+  .nomobile { display: none; }
+  .nomobile + hr { display: none; }
+}
+
+/* ns headers this should always be at the bottom! */
+
+.ns-142 #mw-content-text .hf-nsheader,
+.ns-500 #mw-content-text .hf-nsheader {
+  display: block;
+}
+
+/* Portal Pages */
+span#main-portal-heading {
+  color: #fff;
+  display: block;
+  font-size: 2em;
+  line-height: 1.2em;
+}
+span#section-portal-heading h2 {
+  border: 0;
+  display: inline;
+  margin-left: .25em;
+  color: #fff;
+  font-weight: normal;
+}

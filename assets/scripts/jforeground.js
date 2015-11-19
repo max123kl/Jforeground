@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+jQuery(window).load(function() {
   // Add the 'less than IE9' class to appropriate version of IE by checking for their support of cssFloat (true in v9)
   if (!jQuery.support.cssFloat) { jQuery('html').addClass('lt-ie9').addClass('no-js'); }
 
@@ -66,10 +66,10 @@ if ( jQuery( '#ca-addsection' ).length ) {
 
   // Make the Page Action button respond to hover
   jQuery('a.button.dropdown').mouseover(function(){
-    jQuery('ul#drop1').addClass('open').addClass('right').css('top', '52px').css('left', '780px');
+    jQuery('ul#drop1').addClass('open').addClass('right').css('top', '52px').css('right', '23px');
   });
   jQuery('ul#drop1').mouseleave(function(){
-    jQuery('ul#drop1').removeClass('open').css('top', '-9999px').css('left', '780px');
+    jQuery('ul#drop1').removeClass('open').css('top', '-9999px').css('right', '23px');
   });
 
 });
