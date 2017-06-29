@@ -291,6 +291,16 @@ class jforegroundTemplate extends BaseTemplate {
 
 				<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice" class="sitenotice"><?php $this->html( 'sitenotice' ); ?></div><?php } ?>
 				<?php if ( $this->data['newtalk'] ) { ?><div id="usermessage" class="newtalk panel radius"><?php $this->html( 'newtalk' ); ?></div><?php } ?>
+				<!-- Output page indicators -->
+				<?php echo $this->getIndicators(); ?>
+				<!-- If user is logged in output echo location -->
+				<?php if ($wgUser->isLoggedIn()): ?>
+				<div id="echo-notifications">
+				<div id="echo-notifications-alerts"></div>
+				<div id="echo-notifications-messages"></div>
+				<div id="echo-notifications-notice"></div>
+				</div>
+				<?php endif; ?>
 				</div>
 		</div>
 
