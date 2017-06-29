@@ -57,7 +57,7 @@ class jforegroundTemplate extends BaseTemplate {
 	public function execute() {
 		global $wgUser;
 		global $wgjForegroundFeatures;
-		wfSuppressWarnings();
+		//wfSuppressWarnings();
 		$this->html('headelement');
 		switch ($wgjForegroundFeatures['NavWrapperType']) {
 			case '0':
@@ -90,7 +90,7 @@ class jforegroundTemplate extends BaseTemplate {
 		<nav id="topnav" class="top-bar top row">
 			<ul class="title-area">
 				<li class="name logo">
-					<?php if ($wgForegroundFeatures['navbarIcon'] != '0') { ?>
+					<?php if ($wgjForegroundFeatures['navbarIcon'] != '0') { ?>
 					<a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>">
 						<img alt="<?php echo $this->text('sitename'); ?>" src="<?php echo $this->text('logopath') ?>" style="max-width: 64px;height:auto; max-height:36px; display: inline-block; vertical-align:middle;"></a>
 					<?php } ?>				
@@ -106,73 +106,75 @@ class jforegroundTemplate extends BaseTemplate {
 				<li class="has-dropdown active" id="p-sidebar-Joomla">
 					<a href="#">Joomla!</a>
 						<ul class="dropdown">
-							<li id="n-sidebar-Main"><a href="http://www.joomla.org"><i class="fa fa-joomla 2x-fa icon"></i>Joomla! Home</a></li>
-							<li class="divider"></li>
-							<li id="label"><label>Recent News</label></li>
-							<li id="n-sidebar-Announce"><a href="http://www.joomla.org/announcements.html">Announcements</a></li>
-							<li id="n-sidebar-Blogs"><a href="http://community.joomla.org/blogs/community.html">Blogs</a></li>
-							<li id="n-sidebar-DeveloperNews"><a href="http://developer.joomla.org/news.html">Developer News</a></li>
+							<li id="n-sidebar-Main"><a href="https://www.joomla.org"><i class="fa fa-joomla 2x-fa icon"></i>Joomla! Home</a></li>
 							<li class="divider"></li>
 							<li id="label"><label>Support Joomla!</label></li>
-							<li id="n-sidebar-Shop"><a href="http://shop.joomla.org">Shop Joomla! Gear</a></li>
-							<li id="n-sidebar-Contribute"><a href="http://opensourcematters.org/joomla/support-joomla.html">Contributions</a></li>						
-						</ul>
-				</li>
+                            				<li id="n-sidebar-Contribute"><a href="https://www.joomla.org/contribute-to-joomla.html">Contribute</a></li>
+                            				<li id="n-sidebar-Shop"><a href="https://shop.joomla.org/">The Joomla! Shop</a></li>
+                            				<li id="n-sidebar-Sponsorship"><a href="https://www.joomla.org/sponsor.html">Sponsorship</a></li>
+                            			</ul>
+				</li>					
 				<li class="has-dropdown active" id="p-sidebar-About">
-					<a href="#"></i>About</a>
+					<a href="#">About</a>
 						<ul class="dropdown">
-							<li id="n-sidebar-About"><a href="http://www.joomla.org/about-joomla.html">About Joomla!</a></li>
-							<li id="n-sidebar-Features"><a href="http://www.joomla.org/core-features.html">Core Features</a></li>
-							<li id="n-sidebar-Project"><a href="http://www.joomla.org/about-joomla/the-project.html">The Project</a></li>
-							<li id="n-sidebar-Shop"><a href="http://www.joomla.org/about-joomla/the-project/leadership-team.html">Leadership</a></li>
-							<li id="n-sidebar-Developers"><a href="http://opensourcematters.org/joomla/support-joomla.html">Open Source Matters</a></li>						
-						</ul>
-				</li>
-				<li class="has-dropdown active" id="p-sidebar-Community">
-					<a href="#"></i>Community</a>
-						<ul class="dropdown">
-							<li id="n-sidebar-Community"><a href="http://community.joomla.org">Joomla! Community Portal</a></li>
-							<li id="n-sidebar-Events"><a href="http://events.joomla.org">Joomla! Events</a></li>
-							<li id="n-sidebar-JUX"><a href="http://ux.joomla.org">Joomla! UX</a></li>
-							<li id="n-sidebar-JUGs"><a href="http://community.joomla.org/user-groups.html">Joomla! User Groups</a></li>
-							<li id="n-sidebar-Volunteers"><a href="http://volunteers.joomla.org">Joomla! Volunteers Portal</a></li>
-						</ul>
-				</li>
-				<li class="has-dropdown active" id="p-sidebar-Support">
-					<a href="#"></i>Support</a>
-						<ul class="dropdown">
-							<li id="n-sidebar-Forum"><a href="http://forum.joomla.org/">Joomla! Forum</a></li>
-							<li id="n-sidebar-Docs"><a href="https://docs.joomla.org">Joomla! Documentation</a></li>
-							<li id="n-sidebar-Issues"><a href="http://issues.joomla.org">Joomla! Issue Tracker</a></li>
-							<li id="n-sidebar-Resources"><a href="http://resources.joomla.org/">Joomla! Resources</a></li>
-						</ul>
-				</li>
-				<li class="has-dropdown active" id="p-sidebar-Read">
-					<a href="#"></i>Read</a>
-						<ul class="dropdown">
-							<li id="n-sidebar-Magazine"><a href="http://magazine.joomla.org">Joomla! Magazine</a></li>
-							<li id="n-sidebar-Connect"><a href="http://community.joomla.org/connect.html">Joomla! Connect</a></li>
-							<li id="n-sidebar-MailLists"><a href="http://www.joomla.org/mailing-lists.html">Joomla! Mailing Lists</a></li>
+							<li id="n-sidebar-About"><a href="https://www.joomla.org/about-joomla.html">About Joomla!</a></li>
+							<li id="n-sidebar-Features"><a href="https://www.joomla.org/core-features.html">Core Features</a></li>
+							<li id="n-sidebar-Project"><a href="https://www.joomla.org/about-joomla/the-project.html">The Project</a></li>
+							<li id="n-sidebar-Shop"><a href="https://www.joomla.org/about-joomla/the-project/leadership-team.html">Leadership</a></li>
+							<li id="n-sidebar-OSM"><a href="http://opensourcematters.org">Open Source Matters</a></li>
 						</ul>
 				</li>
 				<li class="has-dropdown active" id="p-sidebar-Extend">
-					<a href="#"></i>Extend</a>
+					<a href="#">Download & Extend</a>
 						<ul class="dropdown">
-							<li id="n-sidebar-Extensions"><a href="http://extensions.joomla.org">Extensions</a></li>
-							<li id="n-sidebar-Showcase"><a href="http://community.joomla.org/showcase">Showcase Directory</a></li>
-							<li id="n-sidebar-Translations"><a href="http://community.joomla.org/translations.html">Translations</a></li>
-							<li id="n-sidebar-Ideas"><a href="http://ideas.joomla.org">Ideas</a></li>
+							<li id="n-sidebar-JoomlaCode"><a href="https://downloads.joomla.org/">Joomla! Downloads</a></li>
+							<li id="n-sidebar-Extensions"><a href="http://extensions.joomla.org/">Extensions Directory</a></li>
+							<li id="n-sidebar-Translations"><a href="https://community.joomla.org/translations.html">Languages Packages</a></li>
+							<li id="n-sidebar-Showcase"><a href="https://showcase.joomla.org/">Showcase Directory</a></li>
+							<li id="n-sidebar-Certification"><a href="https://certification.joomla.org/">Certification Program</a></li>
+						</ul>
+				</li>
+                		<li class="has-dropdown active" id="p-sidebar-News">
+					<a href="#">News</a>
+						<ul class="dropdown">
+							<li id="n-sidebar-Announcements"><a href="https://www.joomla.org/announcements.html">Announcements</a></li>
+							<li id="n-sidebar-Blogs"><a href="https://community.joomla.org/blogs.html">Blogs</a></li>
+							<li id="n-sidebar-Magazine"><a href="http://magazine.joomla.org/">Magazine</a></li>
+							<li id="n-sidebar-Connect"><a href="https://community.joomla.org/connect.html">Joomla! Connect</a></li>
+							<li id="n-sidebar-Mailing"><a href="https://www.joomla.org/mailing-lists.html">Mailing Lists</a></li>
+						</ul>
+				</li>
+				<li class="has-dropdown active" id="p-sidebar-Community">
+					<a href="#">Community</a>
+						<ul class="dropdown">
+							<li id="n-sidebar-Community"><a href="https://community.joomla.org/">Community Portal</a></li>
+							<li id="n-sidebar-Events"><a href="https://events.joomla.org/">Joomla! Events</a></li>
+							<li id="n-sidebar-TM"><a href="https://tm.joomla.org/">Trademark &amp; Licensing</a></li>
+							<li id="n-sidebar-JUGs"><a href="https://community.joomla.org/user-groups.html">User Groups</a></li>
+							<li id="n-sidebar-Volunteers"><a href="https://volunteers.joomla.org/">Volunteers Portal</a></li>
+						</ul>
+				</li>
+				<li class="has-dropdown active" id="p-sidebar-Support">
+					<a href="#">Support</a>
+						<ul class="dropdown">
+							<li id="n-sidebar-Forum"><a href="http://forum.joomla.org/">Forum</a></li>
+							<li id="n-sidebar-Docs"><a href="https://docs.joomla.org">Documentation</a></li>
+							<li id="n-sidebar-Issues"><a href="https://issues.joomla.org/">Issue Tracker</a></li>
+							<li id="n-sidebar-Resources"><a href="http://resources.joomla.org/">Resources Directory</a></li>
+                            				<li id="n-sidebar-Training"><a href="https://community.joomla.org/joomla-training.html">Joomla! Training</a></li>
 						</ul>
 				</li>
 				<li class="has-dropdown active" id="p-sidebar-Developers">
-					<a href="#"></i>Developers</a>
+					<a href="#">Developers</a>
 						<ul class="dropdown">
-							<li id="n-sidebar-Developers"><a href="http://developer.joomla.org">Joomla! Developers</a></li>
-							<li id="n-sidebar-Framework"><a href="http://framework.joomla.org">Joomla! Framework</a></li>
-							<li id="n-sidebar-DevDocs"><a href="https://docs.joomla.org/Portal:Developers">Developer Documentation</a></li>
+							<li id="n-sidebar-Developers"><a href="https://developer.joomla.org/">Developer Network</a></li>
+							<li id="n-sidebar-DevDocs"><a href="https://docs.joomla.org/Main_Page">Documentation</a></li>
 							<li id="n-sidebar-BugSquad"><a href="https://docs.joomla.org/Bug_Squad">Bug Squad</a></li>
-							<li id="n-sidebar-API"><a href="https://api.joomla.org/">Joomla! API</a></li>
+                            				<li id="n-sidebar-Security"><a href="https://developer.joomla.org/security-centre.html">Security Centre</a></li>
+							<li id="n-sidebar-API"><a href="https://api.joomla.org/">API Documentation</a></li>
+							<li id="n-sidebar-JoomlaCode"><a href="https://downloads.joomla.org/">Joomla! Downloads</a></li>
 							<li id="n-sidebar-JoomlaCode"><a href="http://joomlacode.org/">JoomlaCode</a></li>
+							<li id="n-sidebar-Framework"><a href="https://framework.joomla.org/">Joomla! Framework</a></li>
 						</ul>
 				</li>
 			</ul>
@@ -227,9 +229,9 @@ class jforegroundTemplate extends BaseTemplate {
 				</div>
 				<div class="large-6 column hide-for-small">
 					<ul class="button-group pull-right">
-						<li><a href="https://www.joomla.org/download.html" class="button success radius" target="_blank">Download <span class="hide-for-medium">Joomla</span></a></li>
+						<li><a href="https://downloads.joomla.org/" class="button success radius" target="_blank">Download <span class="hide-for-medium">Joomla!</span></a></li>
 						<li><a href="https://demo.joomla.org/" class="button top radius" target="_blank">Demo</a></li>
-						<li><a href="https://www.joomla.com/" class="button com radius" target="_blank">Joomla.com</a></li>
+						<li><a href="https://www.joomla.com/" class="button com radius" target="_blank">joomla.com</a></li>
 					</ul>
 				</div>
 			</div>
@@ -300,7 +302,7 @@ class jforegroundTemplate extends BaseTemplate {
 						<a href="#" data-dropdown="drop1" class="button dropdown small secondary radius"><i class="fa fa-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
 						<ul id="drop1" class="views large-12 columns f-dropdown">
 							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo preg_replace(array('/\sprimary="1"/','/\scontext="[a-z]+"/','/\srel="archives"/'),'',$this->makeListItem($key, $item)); } ?>
-							<?php wfRunHooks( SkinTemplateToolboxEnd, array( &$this, true ) );  ?>
+							<?php wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this ) );  ?>
 						</ul>
 						<?php if ($wgUser->isLoggedIn()): ?>
 							<div id="echo-notifications"></div>
@@ -339,6 +341,16 @@ class jforegroundTemplate extends BaseTemplate {
 						<?php $this->html('bodytext') ?>
 						<div class="clear_both"></div>
 					</div>
+
+					<?php if (!$wgUser->isLoggedIn()): ?>
+										
+					<div id="google-adsense-container">
+					<small class="muted">Advertisement</small><br /><ins data-revive-zoneid="57" data-revive-id="4bacaeba2f8655edc9ca810c946aab5a"></ins>
+					</div>
+					<script async="" src="//ads.joomla.org/www/delivery/asyncjs.php"></script>
+					
+					<?php endif; ?>
+
 					<div class="group"><?php $this->html('catlinks'); ?></div>
 					<?php $this->html('dataAfterContent'); ?>
 					</article>
