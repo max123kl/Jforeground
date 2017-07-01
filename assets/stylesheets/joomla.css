@@ -84,38 +84,34 @@ nav.top-bar.top.row {
 }
 
 .global-header a.button {
-  padding: 10px 20px;
-  margin: .5em .3em 0;
+  padding: 11px 19px;
+  margin: .3em .2em 0;
   font-weight: normal;
-  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
-  font-size: 1.1em;
+  font-size: 16.25px;
+  border-radius: 0;
+}
+
+.global-header a.button {
+  box-shadow: none;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .global-header a.button.success {
-  background: #f89406;
+  background: #faa732;
   border: 0;
 }
 
 .global-header a.button.top {
-  background: #04c;
-  border: 0;
-}
-
-.global-header a.button.com {
-  background: #f44321;
+  background: #006dcc;
   border: 0;
 }
 
 .global-header a.button.success:hover {
-  background-image: linear-gradient(to bottom,#f89406,#fbb450);
+  background: #f89406;
 }
 
 .global-header a.button.top:hover {
-  background-image: linear-gradient(to bottom,#04c,#08c);
-}
-
-.global-header a.button.com:hover {
-  background-image: linear-gradient(to bottom,#f44321,#fd5938);
+  background: #04c;
 }
 
 h1.page-title {
