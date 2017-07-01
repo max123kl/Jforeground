@@ -8,7 +8,7 @@ jQuery(window).load(function() {
     if (window.console) console.log(response.errors);
   });
   
-  // The Echo extension puts an item in personal tools that Foreground really should have in the top menu
+  // The Echo extension puts an item in personal tools that Jforeground really should have in the top menu
   // to make this easier, we move it here and loaded earlier to speed up transform
   jQuery("#pt-notifications").prependTo("#echo-notifications-alerts");
   jQuery("#pt-notifications-message").prependTo("#echo-notifications-messages");

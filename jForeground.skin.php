@@ -109,10 +109,13 @@ class jforegroundTemplate extends BaseTemplate {
 							<li id="n-sidebar-Main"><a href="https://www.joomla.org"><i class="fa fa-joomla 2x-fa icon"></i>Joomla! Home</a></li>
 							<li class="divider"></li>
 							<li id="label"><label>Support Joomla!</label></li>
-                            				<li id="n-sidebar-Contribute"><a href="https://www.joomla.org/contribute-to-joomla.html">Contribute</a></li>
-                            				<li id="n-sidebar-Shop"><a href="https://shop.joomla.org/">The Joomla! Shop</a></li>
-                            				<li id="n-sidebar-Sponsorship"><a href="https://www.joomla.org/sponsor.html">Sponsorship</a></li>
-                            			</ul>
+                            <li id="n-sidebar-Contribute"><a href="https://www.joomla.org/contribute-to-joomla.html">Contribute</a></li>
+                            <li id="n-sidebar-Shop"><a href="https://shop.joomla.org/">The Joomla! Shop</a></li>
+                            <li id="n-sidebar-Sponsorship"><a href="https://www.joomla.org/sponsor.html">Sponsorship</a></li>
+							<li id="label"><label>Try Joomla!</label></li>
+							<li id="n-sidebar-Demo"><a href="https://demo.joomla.org">Demo</a></li>
+							<li id="n-sidebar-Free-Hosted"><a href="https://www.joomla.com">Free Hosted Website</a></li>
+						</ul>
 				</li>					
 				<li class="has-dropdown active" id="p-sidebar-About">
 					<a href="#">About</a>
@@ -151,6 +154,7 @@ class jforegroundTemplate extends BaseTemplate {
 							<li id="n-sidebar-Events"><a href="https://events.joomla.org/">Joomla! Events</a></li>
 							<li id="n-sidebar-TM"><a href="https://tm.joomla.org/">Trademark &amp; Licensing</a></li>
 							<li id="n-sidebar-JUGs"><a href="https://community.joomla.org/user-groups.html">User Groups</a></li>
+							<li id="n-sidebar-Showcase"><a href="https://showcase.joomla.org/">Showcase Directory</a></li>
 							<li id="n-sidebar-Volunteers"><a href="https://volunteers.joomla.org/">Volunteers Portal</a></li>
 						</ul>
 				</li>
@@ -161,7 +165,7 @@ class jforegroundTemplate extends BaseTemplate {
 							<li id="n-sidebar-Docs"><a href="https://docs.joomla.org">Documentation</a></li>
 							<li id="n-sidebar-Issues"><a href="https://issues.joomla.org/">Issue Tracker</a></li>
 							<li id="n-sidebar-Resources"><a href="http://resources.joomla.org/">Resources Directory</a></li>
-                            				<li id="n-sidebar-Training"><a href="https://community.joomla.org/joomla-training.html">Joomla! Training</a></li>
+                            <li id="n-sidebar-Training"><a href="https://community.joomla.org/joomla-training.html">Joomla! Training</a></li>
 						</ul>
 				</li>
 				<li class="has-dropdown active" id="p-sidebar-Developers">
@@ -170,9 +174,8 @@ class jforegroundTemplate extends BaseTemplate {
 							<li id="n-sidebar-Developers"><a href="https://developer.joomla.org/">Developer Network</a></li>
 							<li id="n-sidebar-DevDocs"><a href="https://docs.joomla.org/Main_Page">Documentation</a></li>
 							<li id="n-sidebar-BugSquad"><a href="https://docs.joomla.org/Bug_Squad">Bug Squad</a></li>
-                            				<li id="n-sidebar-Security"><a href="https://developer.joomla.org/security-centre.html">Security Centre</a></li>
+                            <li id="n-sidebar-Security"><a href="https://developer.joomla.org/security-centre.html">Security Centre</a></li>
 							<li id="n-sidebar-API"><a href="https://api.joomla.org/">API Documentation</a></li>
-							<li id="n-sidebar-JoomlaCode"><a href="https://downloads.joomla.org/">Joomla! Downloads</a></li>
 							<li id="n-sidebar-JoomlaCode"><a href="http://joomlacode.org/">JoomlaCode</a></li>
 							<li id="n-sidebar-Framework"><a href="https://framework.joomla.org/">Joomla! Framework</a></li>
 						</ul>
