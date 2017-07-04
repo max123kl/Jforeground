@@ -394,7 +394,6 @@ class jforegroundTemplate extends BaseTemplate {
 		</div>
 		
 		<?php $this->printTrail(); ?>
-		<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
 		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo $wgjForegroundFeatures['addThisFollowPUBID'];?>" async="async"></script>
 		</body>
 		</html>
