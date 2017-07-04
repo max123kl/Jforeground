@@ -333,15 +333,7 @@ class jforegroundTemplate extends BaseTemplate {
 					
 					<div id="social">
 						<!-- AddThis Button BEGIN -->
-						<div class="addthis_toolbox addthis_default_style addthis_16x16_style">
-						<a class="addthis_button_twitter"></a>
-						<a class="addthis_button_facebook"></a>
-						<a class="addthis_button_google_plusone_share"></a>
-						<a class="addthis_button_linkedin"></a>
-						<a class="addthis_button_pinterest_share"></a>
-						<a class="addthis_button_email"></a>
-						<a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
-						</div>
+						<div class="addthis_sharing_toolbox"></div>
 					<!-- moved to resource loader <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5378f70766e02197"></script> -->
 					<!-- AddThis Button END -->
 					</div>
@@ -376,7 +368,6 @@ class jforegroundTemplate extends BaseTemplate {
 							<div class="social-links">
 							<!-- Go to www.addthis.com/dashboard to customize your tools -->
 							<div class="addthis_horizontal_follow_toolbox"></div>
-							<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo $wgjForegroundFeatures['addThisFollowPUBID'];?>"></script>
 							</div>
 						</div>
 					<?php } ?>
@@ -403,6 +394,8 @@ class jforegroundTemplate extends BaseTemplate {
 		</div>
 		
 		<?php $this->printTrail(); ?>
+		<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?php echo $wgjForegroundFeatures['addThisFollowPUBID'];?>" async="async"></script>
 		</body>
 		</html>
 
