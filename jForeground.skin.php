@@ -57,7 +57,7 @@ class jforegroundTemplate extends BaseTemplate {
 	public function execute() {
 		global $wgUser;
 		global $wgjForegroundFeatures;
-		//wfSuppressWarnings();
+		wfSuppressWarnings();
 		$this->html('headelement');
 		switch ($wgjForegroundFeatures['NavWrapperType']) {
 			case '0':
@@ -232,9 +232,8 @@ class jforegroundTemplate extends BaseTemplate {
 				</div>
 				<div class="large-6 column hide-for-small">
 					<ul class="button-group pull-right">
-						<li><a href="https://downloads.joomla.org/" class="button success radius" target="_blank">Download <span class="hide-for-medium">Joomla!</span></a></li>
+						<li><a href="https://downloads.joomla.org/" class="button success radius" target="_blank">Download</a></li>
 						<li><a href="https://demo.joomla.org/" class="button top radius" target="_blank">Demo</a></li>
-						<li><a href="https://www.joomla.com/" class="button com radius" target="_blank">joomla.com</a></li>
 					</ul>
 				</div>
 			</div>
