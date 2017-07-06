@@ -15,9 +15,9 @@ if( !defined( 'MEDIAWIKI' ) ) {
 
 $wgExtensionCredits['skin'][] = array(
 	'path'		 => __FILE__,
-	'name'		 => 'jForeground',
-	'url'		 => 'http://foreground.thingelstad.com/',
-	'version'	 => 1.1,
+	'name'		 => 'Jforeground',
+	'url'		 => 'http://github.com/Hutchy68/Jforeground',
+	'version'	 => 1.2,
 	'author'	 => array(
 		'Garrick Van Buren',
 		'Jamie Thingelstad',

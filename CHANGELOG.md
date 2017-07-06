@@ -1,3 +1,8 @@
+## Version 1.2
+
+* [feature] Echo improvements, mw-indicators
+* [feature] Site title and graphic on mobile
+
 ## Version 1.1
 
 * [feature] Addition of Social Media Follow Icons using AddThis horizontal follow bar
