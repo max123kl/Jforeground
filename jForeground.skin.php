@@ -222,12 +222,9 @@ class jforegroundTemplate extends BaseTemplate {
 			<div class="row">
 				<div class="large-6 column">
 					<h1 class="page-title">
-										<a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>">
-					<?php if ($wgjForegroundFeatures['navbarIcon'] != '0') { ?>
-						<img alt="<?php echo $this->text('sitename'); ?>" src="<?php echo $this->text('logopath') ?>" style="max-width: 64px;height:auto; max-height:36px; display: inline-block; vertical-align:middle;">
-					<?php } ?>					
-					<div class="title-name" style="display: inline-block;"><?php echo $wgjForegroundFeatures['wikiName']; ?></div>
-					</a>
+						<a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>">				
+							<div class="title-name" style="display: inline-block;"><?php echo $wgjForegroundFeatures['wikiName']; ?></div>
+						</a>
 					</h1> 
 				</div>
 				<div class="large-6 column hide-for-small">
@@ -244,9 +241,14 @@ class jforegroundTemplate extends BaseTemplate {
 		<nav id="bottomnav" class="top-bar bottom row">
 			<ul class="title-area">
 				<li class="name">
+				<h1 class="title-name-small">
+				<a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>">				
+				<div class="title-name" style="display:none;"><?php echo $wgjForegroundFeatures['wikiName']; ?></div>
+				</a>
+				</h1>
 				</li>
 				<li class="toggle-topbar menu-icon">
-					<a href="#"><span> </span></a>
+					<a href="#"><span></span></a>
 				</li>
 			</ul>
 

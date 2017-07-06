@@ -139,3 +139,23 @@ h1.page-title {
 #bottom-nav button.button.search.main.webfonts-changed:hover {
   background-image: linear-gradient(to bottom,#fbb450,#f89406);
 }
+
+#bottomnav h1.title-name-small {
+    color: #fff;
+    font-size: 1em;
+    font-weight: normal;
+    text-shadow: 1px 1px 1px #000;
+    line-height: 45px;
+    margin: 0;
+}
+
+#bottomnav h1.title-name-small .title-name {
+    min-width: 200px;
+}
+
+@media only screen and (min-width: 940px) {
+#bottomnav h1.title-name-small {
+    display: none;
+}
+}
+ 

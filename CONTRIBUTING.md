@@ -2,9 +2,9 @@
 
 ## Bug fixes
 
-All bug fixes should PR against the `release/x.x` branch of the version of Foreground with the bug. If you want to fix a bug, please do the following:
+All bug fixes should PR against the `master` branch of the version of Foreground with the bug. If you want to fix a bug, please do the following:
 
-1. Open an issue in [Issues](https://github.com/thingles/foreground/issues) and make sure you tag it with the `bug` tag. If the bug already is a known issue, skip this step.
+1. Open an issue in [Issues](https://github.com/hutchy68/jforeground/issues) and make sure you tag it with the `bug` tag. If the bug already is a known issue, skip this step.
 2. Create a branch in your repo with the name of the `bug` or whatever you feel comfortable with(patch-1, bugX, etc.) using the Foreground's `release/x.x` branch as a base.
 3. If it will take time to fix, periodically check and pull down updates to Foreground's `release/x.x` branch as you are working on the bug fix. Commits can and will occur to `release/x.x` which may affect your `bug fix` branch.
 4. When you are ready to issue a PR against the `release/x.x` branch of Foreground, please use `[bug]` as a tag at the beginning of the PR's title.
@@ -14,7 +14,7 @@ All bug fixes should PR against the `release/x.x` branch of the version of Foreg
 
 All new features for Foreground should PR against the `develop` branch. If you want to add a new feature, you should do the following:
 
-1. Open an issue in [Issues](https://github.com/thingles/foreground/issues) and make sure you tag it with the `feature` tag.
+1. Open an issue in [Issues](https://github.com/hutchy68/jforeground/issues) and make sure you tag it with the `feature` tag.
 2. Create a branch in your repo with the name of the `feature` or whatever you feel comfortable with using Foreground's `develop` branch as a base.
 3. Periodically check and pull down updates to Foreground's `develop` branch as you are working on your proposed feature. Commits can and will occur to `develop` which may affect your `feature` branch.
 4. When you are ready to issue a PR against the `develop` branch of Foreground, please use `[feature]` as a tag at the beginning of the PR's title.

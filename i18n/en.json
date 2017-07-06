@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Garrick Van Buren"
+			"Garrick Van Buren",
+			"Jamie Thingelstad",
+			"Tom Hutchison"
 		]
 	},
 	"skinname-jforeground": "jForeground",
-	"jforeground-desc": "Provides a skin that focuses on putting your content in the foreground. Wrapped in a Joomla! header by Tom Hutchison.",
+	"jforeground-desc": "Provides a skin that focuses on putting your content in the foreground. Modified and wrapped in a Joomla! header.",
 	"jforeground-browsermsg": "may not look as expected in this version of Internet Explorer. We recommend you upgrade to a newer version of Internet Explorer or switch to a browser like Firefox or Chrome.",
 	"jforeground-menutitle": "Menu"
 }
