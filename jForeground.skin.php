@@ -332,7 +332,7 @@ class jforegroundTemplate extends BaseTemplate {
 					<article id="content">
 					<h1 class="title"><?php print $displaytitle; ?></h1>
 					<?php if ( $this->data['isarticle'] ) { ?><h3 id="tagline"><?php $this->msg( 'tagline' ) ?></h3>
-					
+                                        
 					<div id="social">
 						<!-- AddThis Button BEGIN -->
 						<div class="addthis_sharing_toolbox"></div>
@@ -342,20 +342,18 @@ class jforegroundTemplate extends BaseTemplate {
 					<?php } ?>
 					
 					<h5 class="subtitle"><?php $this->html('subtitle') ?></h5>
+                    
+                    <?php if (!$wgUser->isLoggedIn()): ?>
+						<div id="ad">
+                        <script async="" type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=joomlaorg" id="_carbonads_js"></script>
+						</div>
+					<?php endif; ?>   
+
 					<div class="clear_both"></div>
 					<div class="mw-bodytext">
 						<?php $this->html('bodytext') ?>
 						<div class="clear_both"></div>
 					</div>
-
-					<?php if (!$wgUser->isLoggedIn()): ?>
-										
-					<div id="google-adsense-container">
-					<small class="muted">Advertisement</small><br /><ins data-revive-zoneid="57" data-revive-id="4bacaeba2f8655edc9ca810c946aab5a"></ins>
-					</div>
-					<script async="" src="//ads.joomla.org/www/delivery/asyncjs.php"></script>
-					
-					<?php endif; ?>
 
 					<div class="group"><?php $this->html('catlinks'); ?></div>
 					<?php $this->html('dataAfterContent'); ?>
