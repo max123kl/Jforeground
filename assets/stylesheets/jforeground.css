@@ -839,6 +839,7 @@ body.mw-special-Userlogin h2.title {
 
 #social {
 	min-height: 35px;
+	display: block;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -854,4 +855,9 @@ body.mw-special-Userlogin h2.title {
 	margin: 0 auto;
     display: block;
 }
+}
+@media only screen and (min-width: 1201px) {
+    h1.title {
+        max-width:800px;
+    }
 }
