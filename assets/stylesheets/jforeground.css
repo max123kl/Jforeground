@@ -801,3 +801,63 @@ body.mw-special-Userlogin h2.title {
 .mw-indicator {
 	display: inline-block;
 }
+
+/*Carbonads CSS */
+.carbon-text {
+    display: inline-block;
+    width: 150px;
+    vertical-align: middle;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+
+#carbonads {
+    width: 300px;
+    font-size: 12px;
+    background: #eef6ff;
+    padding: 0 5px;
+    margin: 0 0 3px;
+    border: 1px #eef6ff solid;
+    overflow: hidden;
+}
+
+.carbon-poweredby {
+    display: block;
+    float: right;
+    margin-top: -10px;
+}
+
+#ad {
+    position: absolute;
+    top: 10px;
+    right: 22px;
+}
+
+.ns-0 article#content {
+    margin-top: 35px;
+}
+
+#social {
+	min-height: 35px;
+	display: block;
+}
+
+@media only screen and (max-width: 1200px) {
+#ad {
+	margin: 5px 0 10px;
+    width: 100%;
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+#carbonads {
+	margin: 0 auto;
+    display: block;
+}
+}
+@media only screen and (min-width: 1201px) {
+    h1.title {
+        max-width:800px;
+    }
+}
