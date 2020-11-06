@@ -18,6 +18,9 @@ a.button.dropdown { float:right;}
 /* Edit MAT 20160906 - align the Joomla! Home menu on the left */
 nav ul.dropdown li i.icon { width:auto; }
 
+/*Edit SD 2018114 - because French are French*/
+#page-content #lang-control .mw-pt-languages-list { text-transform: capitalize;}
+
 /* Hide the page actions button for special pages (cuz there's nothing in it) */
 .mw-special-FormEdit a.button.dropdown, .ns-special a.button.dropdown { display:none; }
 
