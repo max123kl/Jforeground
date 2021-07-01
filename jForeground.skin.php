@@ -48,7 +48,17 @@ class Skinjforeground extends SkinTemplate {
 
 		$viewport_meta = 'width=device-width, user-scalable=yes, initial-scale=1.0';
 	  $out->addMeta('viewport', $viewport_meta);
-		$out->addModuleScripts('skins.jforeground');
+
+		// Removed after https://phabricator.wikimedia.org/T188689
+		if (version_compare(MW_VERSION, '1.34.0', '>='))
+		{
+			// TODO: Not sure if this is exactly the same as the below
+			$out->addModules('skins.jforeground');
+		}
+		else
+		{
+			$out->addModuleScripts('skins.jforeground');
+		}
 	}
 
 }
@@ -57,7 +67,15 @@ class jforegroundTemplate extends BaseTemplate {
 	public function execute() {
 		global $wgUser;
 		global $wgjForegroundFeatures;
-		wfSuppressWarnings();
+		if (version_compare(MW_VERSION, '1.34.0', '>='))
+		{
+			\Wikimedia\AtEase\AtEase::suppressWarnings();
+		}
+		else
+		{
+			wfSuppressWarnings();
+		}
+
 		$this->html('headelement');
 		switch ($wgjForegroundFeatures['NavWrapperType']) {
 			case '0':
@@ -385,7 +403,14 @@ class jforegroundTemplate extends BaseTemplate {
 		</html>
 
 <?php
-		wfRestoreWarnings();
+		if (version_compare(MW_VERSION, '1.34.0', '>='))
+		{
+			\Wikimedia\AtEase\AtEase::suppressWarnings(true);
+		}
+		else
+		{
+			wfRestoreWarnings();
+		}
 	}
 }
 ?>
