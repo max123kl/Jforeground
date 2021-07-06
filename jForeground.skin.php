@@ -320,7 +320,11 @@ class jforegroundTemplate extends BaseTemplate {
 						<a href="#" data-dropdown="drop1" class="button dropdown small secondary radius"><i class="fa fa-cog"><span class="show-for-medium-up">&nbsp;<?php echo wfMessage( 'actions' )->text() ?></span></i></a>
 						<ul id="drop1" class="views large-12 columns f-dropdown">
 							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo preg_replace(array('/\sprimary="1"/','/\scontext="[a-z]+"/','/\srel="archives"/'),'',$this->makeListItem($key, $item)); } ?>
-							<?php wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this ) );  ?>
+							<?php if (version_compare(MW_VERSION, '1.32.0', '>=')): ?>
+								<?php wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this ) );  ?>
+							<?php else: ?>
+								<?php \Hooks::run( 'SkinTemplateToolboxEnd', array( &$this ) ); ?>
+							<?php endif; ?>
 						</ul>
 						<?php if ($wgUser->isLoggedIn()): ?>
 							<div id="echo-notifications"></div>
