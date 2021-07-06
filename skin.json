@@ -1,0 +1,76 @@
+{
+  "name": "Jforeground",
+  "version": "1.2.0",
+  "author": [
+    "Garrick Van Buren",
+    "Jamie Thingelstad",
+    "Tom Hutchison",
+    "..."
+  ],
+  "license-name": "BSD-2-Clause",
+  "url": "http://github.com/hutchy68/jforeground",
+  "descriptionmsg": "jforeground-desc",
+  "type": "skin",
+  "ValidSkinNames": {
+    "jforeground": "jForeground"
+  },
+  "requires": {
+    "MediaWiki": ">= 1.27.0"
+  },
+  "MessagesDirs": {
+    "SkinjForeground": [
+      "i18n"
+    ]
+  },
+  "AutoloadClasses": {
+    "SkinjForeground": "jForeground.skin.php",
+  },
+  "ResourceModules": {
+    "skins.jforeground.styles": {
+      "position": "top",
+      "styles": [
+        "assets/stylesheets/normalize.css",
+        "assets/stylesheets/font-awesome.css",
+        "assets/stylesheets/foundation.css",
+        "assets/stylesheets/jforeground.css",
+        "assets/stylesheets/jforeground-print.css",
+        "assets/stylesheets/jquery.autocomplete.css",
+        "assets/stylesheets/responsive-tables.css",
+        "assets/stylesheets/icomoon.css",
+        "assets/stylesheets/joomla.css"
+      ]
+    },
+    "skins.jforeground.modernizr": {
+      "position": "top",
+      "scripts": [
+        "assets/scripts/vendor/custom.modernizr.js"
+      ]
+    },
+    "skins.jforeground.js": {
+      "position": "bottom",
+      "scripts": [
+        "assets/scripts/vendor/fastclick.js",
+        "assets/scripts/vendor/responsive-tables.js",
+        "assets/scripts/foundation/foundation.js",
+        "assets/scripts/foundation/foundation.topbar.js",
+        "assets/scripts/foundation/foundation.dropdown.js",
+        "assets/scripts/foundation/foundation.section.js",
+        "assets/scripts/foundation/foundation.clearing.js",
+        "assets/scripts/foundation/foundation.cookie.js",
+        "assets/scripts/foundation/foundation.placeholder.js",
+        "assets/scripts/foundation/foundation.forms.js",
+        "assets/scripts/foundation/foundation.alerts.js",
+        "assets/scripts/jforeground.js"
+      ],
+      "dependencies": [
+        "skins.jforeground.modernizr"
+      ]
+    }
+  },
+  "ResourceFileModulePaths": {
+    "localBasePath": "",
+    "remoteSkinPath": "jforeground"
+  },
+  "config": {},
+  "manifest_version": 1
+}

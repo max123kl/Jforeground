@@ -6,7 +6,7 @@
  * @file
  * @ingroup Skins
  */
- 
+
 
 class Skinjforeground extends SkinTemplate {
 	public $skinname = 'jforeground', $stylename = 'jforeground', $template = 'jforegroundTemplate', $useHeadElement = true;
@@ -39,7 +39,7 @@ class Skinjforeground extends SkinTemplate {
 					header('X-UA-Compatible: IE=edge');
 				break;
 		}
-		$out->addModuleStyles('skins.jforeground');
+		$out->addModuleStyles('skins.jforeground.styles');
 	}
 
 	public function initPage( OutputPage $out ) {
@@ -53,11 +53,11 @@ class Skinjforeground extends SkinTemplate {
 		if (version_compare(MW_VERSION, '1.34.0', '>='))
 		{
 			// TODO: Not sure if this is exactly the same as the below
-			$out->addModules('skins.jforeground');
+			$out->addModules('skins.jforeground.js');
 		}
 		else
 		{
-			$out->addModuleScripts('skins.jforeground');
+			$out->addModuleScripts('skins.jforeground.js');
 		}
 	}
 
@@ -100,7 +100,7 @@ class jforegroundTemplate extends BaseTemplate {
 				$poweredbyMakeType = 'withImage';
 				break;
 			default:
-				break;	
+				break;
 		}
 ?>
 <!-- START FOREGROUNDTEMPLATE -->
@@ -111,7 +111,7 @@ class jforegroundTemplate extends BaseTemplate {
 					<?php if ($wgjForegroundFeatures['navbarIcon'] != '0') { ?>
 					<a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>">
 						<img alt="<?php echo $this->text('sitename'); ?>" src="<?php echo $this->text('logopath') ?>" style="max-width: 64px;height:auto; max-height:36px; display: inline-block; vertical-align:middle;"></a>
-					<?php } ?>				
+					<?php } ?>
 				</li>
 				<li class="toggle-topbar menu-icon">
 					<a href="#"><span> </span></a>
@@ -136,7 +136,7 @@ class jforegroundTemplate extends BaseTemplate {
                             <li id="n-sidebar-Partner"><a href="https://www.joomla.org/about-joomla/partners.html">Partner</a></li>
                             <li id="n-sidebar-Shop"><a href="https://shop.joomla.org/">Shop</a></li>
 						</ul>
-				</li>	
+				</li>
                 <li class="has-dropdown active" id="p-sidebar-Extend">
 					<a href="#">Download & Extend</a>
 						<ul class="dropdown">
@@ -158,7 +158,7 @@ class jforegroundTemplate extends BaseTemplate {
 							<li id="n-sidebar-Magazine"><a href="https://magazine.joomla.org/">Magazine</a></li>
 						</ul>
 				</li>
-				
+
                 <li class="has-dropdown active" id="p-sidebar-News">
 					<a href="#">Community & Support</a>
 						<ul class="dropdown">
@@ -171,7 +171,7 @@ class jforegroundTemplate extends BaseTemplate {
                             <li id="n-sidebar-Vel"><a href="https://vel.joomla.org">Vulnerable Extensions List</a></li>
 						</ul>
 				</li>
-                
+
 				<li class="has-dropdown active" id="p-sidebar-Developers">
 					<a href="#">Developer Resources</a>
 						<ul class="dropdown">
@@ -214,22 +214,22 @@ class jforegroundTemplate extends BaseTemplate {
 									<?php endif; ?>
 							</li>
 
-				<?php endif; ?>			
+				<?php endif; ?>
 
 			</ul>
 		</section>
 		</nav>
 		</div>
-		
+
 		<div id="global-header">
 		<nav class="global-header">
 			<div class="row">
 				<div class="large-6 column">
 					<h1 class="page-title">
-						<a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>">				
+						<a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>">
 							<div class="title-name" style="display: inline-block;"><?php echo $wgjForegroundFeatures['wikiName']; ?></div>
 						</a>
-					</h1> 
+					</h1>
 				</div>
 				<div class="large-6 column hide-for-small">
 					<ul class="button-group pull-right">
@@ -240,13 +240,13 @@ class jforegroundTemplate extends BaseTemplate {
 			</div>
 		</nav>
 		</div>
-		
+
 		<div id="bottom-nav">
 		<nav id="bottomnav" class="top-bar bottom row">
 			<ul class="title-area">
 				<li class="name">
 				<h1 class="title-name-small">
-				<a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>">				
+				<a href="<?php echo $this->data['nav_urls']['mainpage']['href']; ?>">
 				<div class="title-name" style="display:none;"><?php echo $wgjForegroundFeatures['wikiName']; ?></div>
 				</a>
 				</h1>
@@ -271,7 +271,7 @@ class jforegroundTemplate extends BaseTemplate {
 			</ul>
 
 			<ul id="top-bar-right" class="right">
-			
+
 				<li class="has-form">
 					<form action="<?php $this->text( 'wgScript' ); ?>" id="searchform" class="mw-search">
 						<div class="row">
@@ -282,14 +282,14 @@ class jforegroundTemplate extends BaseTemplate {
 						</div>
 					</form>
 				</li>
-			
+
 			</ul>
 		</section>
 		</nav>
 		</div>
-		
+
 		<?php if ($wgjForegroundFeatures['NavWrapperType'] != '0') echo "</div>"; ?>
-		
+
 		<div id="page-content">
 		<div class="row">
 				<div class="large-12 columns">
@@ -336,7 +336,7 @@ class jforegroundTemplate extends BaseTemplate {
 					<article id="content">
 					<h1 class="title"><?php print $displaytitle; ?></h1>
 					<?php if ( $this->data['isarticle'] ) { ?><h3 id="tagline"><?php $this->msg( 'tagline' ) ?></h3>
-                                        
+
 					<div id="social">
 						<!-- AddThis Button BEGIN -->
 						<div class="addthis_sharing_toolbox"></div>
@@ -344,14 +344,14 @@ class jforegroundTemplate extends BaseTemplate {
 					<!-- AddThis Button END -->
 					</div>
 					<?php } ?>
-					
+
 					<h5 class="subtitle"><?php $this->html('subtitle') ?></h5>
-                    
+
                     <?php if (!$wgUser->isLoggedIn()): ?>
 						<div id="ad">
                         <script async="" type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=joomlaorg" id="_carbonads_js"></script>
 						</div>
-					<?php endif; ?>   
+					<?php endif; ?>
 
 					<div class="clear_both"></div>
 					<div class="mw-bodytext">
@@ -379,9 +379,9 @@ class jforegroundTemplate extends BaseTemplate {
 					<ul id="footer-left">
 						<?php foreach ( $this->getFooterLinks( "flat" ) as $key ) { ?>
 							<li id="footer-<?php echo $key ?>"><?php $this->html( $key ) ?></li>
-						<?php } ?>									
+						<?php } ?>
 					</ul>
-					</div>	
+					</div>
 					<div id="footer-right-icons" class="<?php echo $footerRightClass;?>">
 					<ul id="poweredby">
 						<?php foreach ( $this->getFooterIcons( $poweredbyType ) as $blockName => $footerIcons ) { ?>
@@ -391,14 +391,14 @@ class jforegroundTemplate extends BaseTemplate {
 							</li>
 						<?php } ?>
 					</ul>
-					</div>								
+					</div>
 				</div>
 			</footer>
 
 		</div>
-		
+
 		<?php $this->printTrail(); ?>
-		
+
 		</body>
 		</html>
 
