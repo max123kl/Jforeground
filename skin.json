@@ -23,7 +23,7 @@
     ]
   },
   "AutoloadClasses": {
-    "SkinjForeground": "jForeground.skin.php",
+    "SkinjForeground": "jForeground.skin.php"
   },
   "ResourceModules": {
     "skins.jforeground.styles": {
