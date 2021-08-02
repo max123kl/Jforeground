@@ -321,9 +321,9 @@ class jforegroundTemplate extends BaseTemplate {
 						<ul id="drop1" class="views large-12 columns f-dropdown">
 							<?php foreach( $this->data['content_actions'] as $key => $item ) { echo preg_replace(array('/\sprimary="1"/','/\scontext="[a-z]+"/','/\srel="archives"/'),'',$this->makeListItem($key, $item)); } ?>
 							<?php if (version_compare(MW_VERSION, '1.32.0', '>=')): ?>
-								<?php wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this ) );  ?>
-							<?php else: ?>
 								<?php \Hooks::run( 'SkinTemplateToolboxEnd', array( &$this ) ); ?>
+							<?php else: ?>
+								<?php wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this ) );  ?>
 							<?php endif; ?>
 						</ul>
 						<?php if ($wgUser->isLoggedIn()): ?>
