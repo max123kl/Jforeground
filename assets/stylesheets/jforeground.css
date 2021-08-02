@@ -748,7 +748,7 @@ body.mw-special-Userlogin h2.title {
 #pt-notifications-notice .mw-echo-notifications-badge,
 #pt-notifications-alert .mw-echo-notifications-badge,
 #pt-notifications-message .mw-echo-notifications-badge {
-	background-size: 1.4em !important;
+	/* background-size: 1.4em !important; */
 	font-size: 1.1em;
 	color: transparent;
 	filter: invert(15%);
@@ -863,4 +863,14 @@ body.mw-special-Userlogin h2.title {
     h1.title {
         max-width:800px;
     }
+}
+
+.mw-pt-translate-header {
+    margin-bottom: 1.1875em;
+    padding-bottom: 1.25em;
+    border-bottom: 1px solid #dddddd;
+}
+
+#pt-uls .uls-trigger:before {
+    display: none;
 }
