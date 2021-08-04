@@ -888,3 +888,8 @@ body.mw-special-Userlogin h2.title {
     padding: 0 0.5em;
     line-height: 1.25em;
 }
+
+/* In translate view don't have white text on light grey background */
+.tux-view-switcher button {
+    color: black;
+}
