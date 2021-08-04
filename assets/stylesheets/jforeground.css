@@ -874,3 +874,17 @@ body.mw-special-Userlogin h2.title {
 #pt-uls .uls-trigger:before {
     display: none;
 }
+
+/* Ensure categories at the bottom of the page display inline */
+.catlinks ul {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.catlinks li {
+    display: inline-block;
+    margin: 0.125em 0;
+    padding: 0 0.5em;
+    line-height: 1.25em;
+}
