@@ -905,3 +905,8 @@ body.mw-special-Userlogin h2.title {
 .toctogglespan {
     vertical-align: top;
 }
+
+div.tright, div.floatright, table.floatright {
+    float: right;
+    clear: right;
+}
