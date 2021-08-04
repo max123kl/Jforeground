@@ -893,3 +893,15 @@ body.mw-special-Userlogin h2.title {
 .tux-view-switcher button {
     color: black;
 }
+
+.mw-editsection {
+    font-size: small;
+    font-weight: normal;
+    margin-left: 1em;
+    vertical-align: baseline;
+    line-height: 1em;
+}
+
+.toctogglespan {
+    vertical-align: top;
+}
