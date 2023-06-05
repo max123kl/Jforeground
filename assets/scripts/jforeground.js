@@ -1,6 +1,7 @@
-jQuery(window).load(function() {
-  // Add the 'less than IE9' class to appropriate version of IE by checking for their support of cssFloat (true in v9)
-  if (!jQuery.support.cssFloat) { jQuery('html').addClass('lt-ie9').addClass('no-js'); }
+jQuery(document).ready(function() {
+  // Add the 'less than IE9' class to appropriate version of IE by checking for their support of cssFloat (true in v9)\
+  // CSS Float as a check doesn't exist in jQuery 3 (and mediawiki 1.35). So check the property exists first.
+  if (jQuery.support.hasOwnProperty('cssFloat') && !jQuery.support.cssFloat) { jQuery('html').addClass('lt-ie9').addClass('no-js'); }
 
 
   jQuery(document).foundation(function (response) {
