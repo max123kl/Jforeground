@@ -4,6 +4,16 @@
 
 .ns-798 { background: linear-gradient(to bottom, #5290C8 0px, #ffffff 240px) }
 .ns-798.ns-subject.page-Joomla_Main_Page h1.title { display: none; }
+
+a#mw-createaccount-join {
+  background-color: #ddd;
+  border-color: #ddd;
+}
+
+#userloginForm .mw-ui-vform {
+    width: 100%;
+    max-width:  400px;
+}
  
 #bottom-nav.fixed { top:45px; }
  
@@ -47,6 +57,8 @@ a:focus { outline: none }
 body { font-size: 95%; background-color: #f4f6f7; }
 
 .center { text-align: center; }
+
+pre { direction: ltr; }
  
 @media only screen and (min-width: 768px) { 
     h5 { line-height: 1.2 }
@@ -123,6 +135,11 @@ body[class*="page-Beginners"] h3#tagline { display: none }
 }
  
 #toc { border: 1px solid #ccc }
+ 
+body.page-User_Hutchy68_New_main_page h2.title,
+body.page-User_Hutchy68_New_main_page h3#tagline,
+body.page-User_Hutchy68_New_main_page h5.subtitle,
+body.page-User_Hutchy68_New_main_page h4.namespace.label { display: none }
  
 /* ===[ Line up the icons in dropdown menus ]=== */
  
@@ -596,34 +613,34 @@ p {
 div#mw-content-text a.external[href ^="mailto:"],
 .link-mailto {
     padding-right: 12px;
-    background: url(skins/foreground/assets/images/mail-icon.png) top right no-repeat;
+    background: url(skins/jforeground/assets/images/mail-icon.png) top right no-repeat;
     text-decoration: none !important;
 }
  
 div#mw-content-text a.external[href ^="http://"],
 .link-http {
     padding-right: 12px;
-    background: url(skins/foreground/assets/images/external-link-ltr-icon.png) top right no-repeat;
+    background: url(skins/jforeground/assets/images/external-link-ltr-icon.png) top right no-repeat;
     text-decoration: none !important;
 }
  
 div#mw-content-text a.external[href ^="https://"],
 .link-https {
     padding-right: 12px;
-    background: url(skins/foreground/assets/images/lock-icon.png) top right no-repeat;
+    background: url(skins/jforeground/assets/images/lock-icon.png) top right no-repeat;
     text-decoration: none !important;
 }
  
 div#mw-content-text a.external[href ^="gopher://"] {
     padding-right: 13px;
-    background: url(skins/foreground/assets/images/external-link-ltr-icon.png) center right no-repeat;
+    background: url(skins/jforeground/assets/images/external-link-ltr-icon.png) center right no-repeat;
     text-decoration: none !important;
 }
  
 div#mw-content-text a.external[href ^="ftp://"],
 .link-ftp {
     padding-right: 12px;
-    background: url(skins/foreground/assets/images/file-icon.png) top right no-repeat;
+    background: url(skins/jforeground/assets/images/file-icon.png) top right no-repeat;
     text-decoration: none !important;
 }
  
@@ -631,7 +648,7 @@ div#mw-content-text a.external[href ^="irc://"],
 div#mw-content-text a.external[href ^="ircs://"],
 .link-irc {
     padding-right: 12px;
-    background: url(skins/foreground/assets/images/talk-icon.png) top right no-repeat;
+    background: url(skins/jforeground/assets/images/talk-icon.png) top right no-repeat;
     text-decoration: none !important;
 }
  
@@ -649,7 +666,7 @@ div#mw-content-text a.external[href $=".wma"],
 div#mw-content-text a.external[href $=".WMA"],
 .link-audio {
     padding-right: 12px;
-    background: url(skins/foreground/assets/images/audio-icon.png) top right no-repeat;
+    background: url(skins/jforeground/assets/images/audio-icon.png) top right no-repeat;
     text-decoration: none !important;
 }
  
@@ -663,7 +680,7 @@ div#mw-content-text a.external[href $=".mpg"],
 div#mw-content-text a.external[href $=".MPG"],
 .link-video {
     padding-right: 12px;
-    background: url(skins/foreground/assets/images/video-icon.png) top right no-repeat;
+    background: url(skins/jforeground/assets/images/video-icon.png) top right no-repeat;
     text-decoration: none !important;
 }
  
@@ -675,14 +692,14 @@ div#mw-content-text a.external[href *=".pdf?"],
 div#mw-content-text a.external[href *=".PDF?"],
 .link-document {
     padding-right: 12px;
-    background: url(skins/foreground/assets/images/document-icon.png) top right no-repeat;
+    background: url(skins/jforeground/assets/images/document-icon.png) top right no-repeat;
     text-decoration: none !important;
 }
  
 /* ===[ Echo badge ]=== */
  
 #echo-notifications #pt-notifications a.mw-echo-short-link .mw-badge { padding: 5px }
-#echo-notifications { margin: .5em 1em .5em 0 }
+#echo-notifications { margin: -1em 1em .5em 0 }
  
 /* ===[ Link improvements as suggested by Peter ]=== */
  
@@ -967,8 +984,7 @@ li#footer-disclaimer { display: block }
  
 /* ===[ For Social ]=== */
  
-div#social {
-    display: inline-block;
+#social {
     margin: .25em .5em 0 0;
 }
  
@@ -978,9 +994,10 @@ div#social {
     margin: 0 .5em 0 0;
     font-size: 1.5em;
     line-height: 32px;
+    min-height: 40px;
 }
  
-.addthis_toolbox.addthis_default_style.addthis_32x32_style {
+.addthis_toolbox.addthis_default_style {
     display: inline-block;
     float: right;
 }
@@ -1212,7 +1229,11 @@ span.icon-text {
 /* ns headers this should always be at the bottom! */
 
 .ns-142 #mw-content-text .hf-nsheader,
-.ns-500 #mw-content-text .hf-nsheader {
+.ns-500 #mw-content-text .hf-nsheader,
+.ns-124 #mw-content-text .hf-nsheader,
+.ns-126 #mw-content-text .hf-nsheader,
+.ns-144 #mw-content-text .hf-nsheader,
+.ns-504 #mw-content-text .hf-nsheader {
   display: block;
 }
 
@@ -1229,4 +1250,68 @@ span#section-portal-heading h2 {
   margin-left: .25em;
   color: #fff;
   font-weight: normal;
+}
+html, body {
+  background: #f5f5f5;
+}
+
+div#google-adsense-container {
+  text-align: center;
+  margin: .5em 0 1em;
+  overflow: hidden;
+  border-top: 1px #eee solid;
+  border-bottom: 1px #eee solid;
+}
+
+/* responsive tables */
+table.wikitable.new-responsive {
+    white-space: normal;
+    word-wrap: break-word;
+}
+@media screen and (max-width: 782px) {
+table {
+    width: 100%;
+    display: table;
+}
+table.new-responsive tbody td:before {
+    content: attr(data-th);
+    display: block;
+    text-align: center;
+    font-weight:bold;
+    font-size:16px;	
+}
+}
+@media screen and (max-width: 782px) {
+table.new-responsive tr td:first-child {
+    background: #ddd;
+    font-weight: bold;
+    font-size: 20px;
+    padding:.5em;
+}
+table.new-responsive tr td:first-child:before {
+    display: none;
+}
+}
+@media screen and (max-width: 782px) {
+table.new-responsive thead {
+    display: none;
+} }
+@media screen and (max-width: 782px) {
+table.new-responsive tbody tr:first-child {
+    display:none;
+}
+}
+ 
+@media screen and (max-width: 782px) {
+table.new-responsive tbody td {
+    display: block !important;
+    text-align: center !important;
+}
+}
+@media screen and (max-width: 782px) {
+table.new-responsive tbody td ul {
+    display: block !important;
+    text-align: left
+     !important;
+}
 }

@@ -5,13 +5,14 @@
 $('li#p-Learn a:first').prepend('<div class="drop-icon"><i class="fa fa-university fa-fw"></i></div>')
 $('li#p-Help a:first').prepend('<div class="drop-icon"><i class="fa fa-life-ring fa-fw"></i></div>')
 $('li#p-Browse a:first').prepend('<div class="drop-icon"><i class="fa fa-search fa-fw"></i></div>')
- 
-/* Smooth scroll of TOC links with correct offset */
+
+/* Smooth scroll of TOC links with correct offset but ignore category pages for prev and next */
+if ( mw.config.get( 'wgNamespaceNumber' ) !== 14 ) {
 $(function() {
   $('a[href*=#]:not([href=#])').click(function(e) {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
 && location.hostname == this.hostname) {
- 
+
       e.preventDefault();
       var target = $(this.hash),
       $target = $(target);
@@ -38,7 +39,8 @@ $(function() {
       }
     }
 });
- 
+}
+
 /* Sticky navbars for mobile view */
 jQuery(document).ready(function(){
 	   $(window).bind('scroll', function() {
@@ -52,16 +54,19 @@ jQuery(document).ready(function(){
 	  			 			 }
 				 $('#bottom-nav').addClass('fixed');
 				 $('#navwrapper').css('margin-bottom', '5em');
+				 $('#bottomnav .title-name').css('display', 'inline-block');
 			 }
 			 else {
 				 $('#bottom-nav').removeClass('fixed');
 				 $('body').css('padding-top','45px');
 				 $('#navwrapper').css('margin-bottom', '1.875em');
+				 $('#bottomnav .title-name').css('display', 'none');
 			 }
 		});
 	});
- 
-/* Footer fix on small pages */ 
+
+/* Footer fix on small pages */
+
 if ( mw.config.get( 'wgIsArticle' ) ) {
 $(window).bind("load", function () {
     var footer = $("footer.row");
@@ -75,18 +80,4 @@ $(window).bind("load", function () {
         });
     }
 });
-}
- 
-/* AddThis script for social sharing do not remove specific to Joomla*/ 
-mw.loader.load( 'https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5378f70766e02197&action=raw&ctype=text/javascript&smaxage=21600&maxage=86400' );
- 
-var addthis_share = {
-     url_transforms : {
-          shorten: {
-               twitter: 'bitly'
-          }
-     }, 
-     shorteners : {
-          bitly : {} 
-     }
 }
