@@ -1,3 +1,8 @@
+## Version 1.3
+* Require mediawiki 1.35 and use new skin.json features to simplify code
+* Remove AddThis as the service has been turned off
+* Remove IE 8 support header
+
 ## Version 1.2
 
 * [feature] Echo improvements, mw-indicators

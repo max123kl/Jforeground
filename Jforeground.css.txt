@@ -996,12 +996,7 @@ li#footer-disclaimer { display: block }
     line-height: 32px;
     min-height: 40px;
 }
- 
-.addthis_toolbox.addthis_default_style {
-    display: inline-block;
-    float: right;
-}
- 
+
 /* ===[ Hide social share on certain namespaces until I can figure out why $this->data['isarticle'] is ignoring $wgContentNamespaces as the article check ]=== */
  
 .ns-2 div#social,

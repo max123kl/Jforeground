@@ -6,7 +6,6 @@
  * @file
  * @ingroup Skins
  */
-
 class jforegroundTemplate extends BaseTemplate {
 	/**
 	 * @param Config|null $config
@@ -22,7 +21,6 @@ class jforegroundTemplate extends BaseTemplate {
 			'wikiName' => &$GLOBALS['wgSitename'],
 			'navbarIcon' => false,
 			'showFooterIcons' => 1,
-			'addThisFollowPUBID' => 'ra-5378f70766e02197'
 		);
 		foreach ($wgjForegroundFeaturesDefaults as $fgOption => $fgOptionValue) {
 			if ( !isset($wgjForegroundFeatures[$fgOption]) ) {
@@ -295,14 +293,8 @@ class jforegroundTemplate extends BaseTemplate {
 						?><h4 class="namespace label"><?php print $namespace; ?></h4><?php } ?>
 					<article id="content">
 						<h1 class="title"><?php print $displaytitle; ?></h1>
-						<?php if ( $this->data['isarticle'] ) { ?><h3 id="tagline"><?php $this->msg( 'tagline' ) ?></h3>
-
-							<div id="social">
-								<!-- AddThis Button BEGIN -->
-								<div class="addthis_sharing_toolbox"></div>
-								<!-- moved to resource loader <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5378f70766e02197"></script> -->
-								<!-- AddThis Button END -->
-							</div>
+						<?php if ( $this->data['isarticle'] ) { ?>
+                            <h3 id="tagline"><?php $this->msg( 'tagline' ) ?></h3>
 						<?php } ?>
 
 						<h5 class="subtitle"><?php $this->html('subtitle') ?></h5>
@@ -327,14 +319,6 @@ class jforegroundTemplate extends BaseTemplate {
 
 			<footer class="row">
 				<div id="footer">
-					<?php if ($wgjForegroundFeatures['addThisFollowPUBID'] != '') { ?>
-						<div class="social-footer large-12 small-12 columns">
-							<div class="social-links">
-								<!-- Go to www.addthis.com/dashboard to customize your tools -->
-								<div class="addthis_horizontal_follow_toolbox"></div>
-							</div>
-						</div>
-					<?php } ?>
 					<div id="footer-left" class="<?php echo $footerLeftClass;?>">
 						<ul id="footer-left">
 							<?php foreach ( $this->getFooterLinks( "flat" ) as $key ) { ?>
