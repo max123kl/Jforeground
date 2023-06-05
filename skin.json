@@ -38,9 +38,6 @@
       "i18n"
     ]
   },
-  "AutoloadClasses": {
-    "jforegroundTemplate": "jForeground.skin.php"
-  },
   "ResourceModules": {
     "skins.jforeground.styles": {
       "position": "top",
