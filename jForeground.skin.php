@@ -6,64 +6,30 @@
  * @file
  * @ingroup Skins
  */
-
-
-class Skinjforeground extends SkinTemplate {
-	public $skinname = 'jforeground', $stylename = 'jforeground', $template = 'jforegroundTemplate', $useHeadElement = true;
-
-	public function setupSkinUserCss(OutputPage $out) {
-		parent::setupSkinUserCss($out);
-		global $wgjForegroundFeatures;
-		$wgjForegroundFeaturesDefaults = array(
-			'showActionsForAnon' => true,
-			'NavWrapperType' => 'divonly',
-			'showHelpUnderTools' => true,
-			'showRecentChangesUnderTools' => true,
-			'wikiName' => &$GLOBALS['wgSitename'],
-			'navbarIcon' => false,
-			'IeEdgeCode' => 1,
-			'showFooterIcons' => 1,
-			'addThisFollowPUBID' => 'ra-5378f70766e02197'
-		);
-		foreach ($wgjForegroundFeaturesDefaults as $fgOption => $fgOptionValue) {
-			if ( !isset($wgjForegroundFeatures[$fgOption]) ) {
-				$wgjForegroundFeatures[$fgOption] = $fgOptionValue;
-			}
-		}
-		switch ($wgjForegroundFeatures['IeEdgeCode']) {
-			case 1:
-				$out->addHeadItem('ie-meta', '<meta http-equiv="X-UA-Compatible" content="IE=edge" />');
-				break;
-			case 2:
-				if (isset($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false))
-					header('X-UA-Compatible: IE=edge');
-				break;
-		}
-		$out->addModuleStyles('skins.jforeground.styles');
-	}
-
-	public function initPage( OutputPage $out ) {
-		global $wgLocalStylePath;
-		parent::initPage($out);
-
-		$viewport_meta = 'width=device-width, user-scalable=yes, initial-scale=1.0';
-	  $out->addMeta('viewport', $viewport_meta);
-
-		// Removed after https://phabricator.wikimedia.org/T188689
-		if (version_compare(MW_VERSION, '1.34.0', '>='))
-		{
-			// TODO: Not sure if this is exactly the same as the below
-			$out->addModules('skins.jforeground.js');
-		}
-		else
-		{
-			$out->addModuleScripts('skins.jforeground.js');
-		}
-	}
-
-}
-
 class jforegroundTemplate extends BaseTemplate {
+    /**
+     * @param Config|null $config
+     */
+    public function __construct( Config $config = null ) {
+        parent::__construct($config);
+        global $wgjForegroundFeatures;
+        $wgjForegroundFeaturesDefaults = array(
+            'showActionsForAnon' => true,
+            'NavWrapperType' => 'divonly',
+            'showHelpUnderTools' => true,
+            'showRecentChangesUnderTools' => true,
+            'wikiName' => &$GLOBALS['wgSitename'],
+            'navbarIcon' => false,
+            'showFooterIcons' => 1,
+            'addThisFollowPUBID' => 'ra-5378f70766e02197'
+        );
+        foreach ($wgjForegroundFeaturesDefaults as $fgOption => $fgOptionValue) {
+            if ( !isset($wgjForegroundFeatures[$fgOption]) ) {
+                $wgjForegroundFeatures[$fgOption] = $fgOptionValue;
+            }
+        }
+    }
+
 	public function execute() {
 		global $wgUser;
 		global $wgjForegroundFeatures;
@@ -371,14 +337,6 @@ class jforegroundTemplate extends BaseTemplate {
 
 			<footer class="row">
 				<div id="footer">
-					<?php if ($wgjForegroundFeatures['addThisFollowPUBID'] != '') { ?>
-						<div class="social-footer large-12 small-12 columns">
-							<div class="social-links">
-							<!-- Go to www.addthis.com/dashboard to customize your tools -->
-							<div class="addthis_horizontal_follow_toolbox"></div>
-							</div>
-						</div>
-					<?php } ?>
 					<div id="footer-left" class="<?php echo $footerLeftClass;?>">
 					<ul id="footer-left">
 						<?php foreach ( $this->getFooterLinks( "flat" ) as $key ) { ?>
