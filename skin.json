@@ -18,7 +18,7 @@
       "args": [
         {
           "scripts": [
-            "skins.jforeground.scripts"
+            "skins.jforeground.js"
           ],
           "styles": [
             "skins.jforeground.styles"
