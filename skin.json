@@ -14,7 +14,7 @@
   "type": "skin",
   "ValidSkinNames": {
     "jforeground": {
-      "class": "SkinTemplate",
+      "class": "Skinjforeground",
       "args": [
         {
           "scripts": [
@@ -23,9 +23,7 @@
           "styles": [
             "skins.jforeground.styles"
           ],
-          "name": "jforeground",
-          "template": "jforegroundTemplate",
-          "responsive": true
+          "name": "jforeground"
         }
       ]
     }
@@ -37,6 +35,10 @@
     "SkinjForeground": [
       "i18n"
     ]
+  },
+  "AutoloadClasses": {
+    "Skinjforeground": "jForeground.skin.php",
+    "jforegroundTemplate": "jForeground.skin.php"
   },
   "ResourceModules": {
     "skins.jforeground.styles": {

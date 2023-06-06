@@ -6,6 +6,26 @@
  * @file
  * @ingroup Skins
  */
+
+/**
+ * Defines the skin for the foreground template. All remaining properties in here can be set in
+ * skin.json from mediawiki 1.36 and higher
+ */
+class Skinjforeground extends SkinTemplate {
+    public $skinname = 'jforeground', $stylename = 'jforeground', $template = 'jforegroundTemplate';
+
+    public function initPage( OutputPage $out ) {
+        parent::initPage($out);
+
+        // This can be set through the responsive property in skin.json from mediawiki 1.36 and higher
+        $out->addMeta(
+            'viewport',
+            'width=device-width, initial-scale=1.0, ' .
+            'user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0'
+        );
+    }
+}
+
 class jforegroundTemplate extends BaseTemplate {
 	/**
 	 * @param Config|null $config
